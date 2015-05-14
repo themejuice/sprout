@@ -38,25 +38,16 @@ Dotenv::required(array(
   "DB_USER",
   "DB_PASSWORD",
   "DB_HOST",
+  "WP_STAGE",
+  "WP_DEBUG",
   "WP_HOME",
   "WP_SITEURL"
 ));
 
 /**
- * Activate debugging on development stage
- */
-if ( $stage === "development" ) {
-  define( "WP_DEBUG", true );
-  define( "WP_CACHE", false );
-} else {
-  define( "WP_DEBUG", false );
-  define( "WP_CACHE", true );
-}
-
-/**
  * Stage
  */
-define( "WP_STAGE", $stage );
+define( "WP_STAGE", getenv("WP_STAGE") );
 
 /**
  * Database
@@ -65,6 +56,11 @@ define( "DB_NAME", getenv("DB_NAME") );
 define( "DB_USER", getenv("DB_USER") );
 define( "DB_PASSWORD", getenv("DB_PASSWORD") );
 define( "DB_HOST", getenv("DB_HOST") );
+
+/**
+ * Debug
+ */
+define( "WP_DEBUG", getenv("WP_DEBUG") );
 
 /**
  * URLs
