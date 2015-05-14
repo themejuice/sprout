@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*! Compiled on 2015-05-08 at 13:22:53 using Sass version 3.4.13 (Selective Steve) */
+/*! Compiled on 2015-05-14 at 15:59:32 using Sass version 3.4.13 (Selective Steve) */
 /**
  * Fonts
  */
@@ -8,14 +8,14 @@
   font-weight: 400;
   font-style: normal;
   src: url("../fonts/open-sans/open-sans-400.eot");
-  src: url("../fonts/open-sans/open-sans-400.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-400.woff") format("woff"), url("../fonts/open-sans/open-sans-400.ttf") format("truetype"), url("../fonts/open-sans/open-sans-400.svg#open-sans") format("svg");
+  src: url("../fonts/open-sans/open-sans-400.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-400.woff") format("woff"), url("../fonts/open-sans/open-sans-400.svg#open-sans") format("svg");
 }
 @font-face {
   font-family: "open-sans";
   font-weight: 400;
   font-style: italic;
   src: url("../fonts/open-sans/open-sans-400-italic.eot");
-  src: url("../fonts/open-sans/open-sans-400-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-400-italic.woff") format("woff"), url("../fonts/open-sans/open-sans-400-italic.ttf") format("truetype"), url("../fonts/open-sans/open-sans-400-italic.svg#open-sans") format("svg");
+  src: url("../fonts/open-sans/open-sans-400-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/open-sans/open-sans-400-italic.woff") format("woff"), url("../fonts/open-sans/open-sans-400-italic.svg#open-sans") format("svg");
 }
 /**
  * Compass

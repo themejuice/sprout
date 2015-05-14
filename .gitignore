@@ -36,11 +36,12 @@ backup/
 #
 wp/*
 !wp/.gitkeep
-app/themes/**/*.php
-app/mu-plugins/*
-!app/mu-plugins/.gitkeep
+app/themes/*
+!app/themes/.gitkeep
 app/plugins/*
 !app/plugins/.gitkeep
+app/mu-plugins/*
+!app/mu-plugins/.gitkeep
 app/uploads/*
 !app/uploads/.gitkeep
 app/upgrade/

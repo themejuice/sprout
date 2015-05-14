@@ -1,37 +1,40 @@
 module.exports = (grunt) ->
   "use strict"
 
-  require("jit-grunt") grunt, {
+  require("jit-grunt") grunt,
     haml: "grunt-haml-php"
-  }
 
-  # Project configuration
-  grunt.initConfig {
-
-    # Metadata
+  grunt.initConfig
     pkg: grunt.file.readJSON "package.json"
     banner: "/*! <%= pkg.name %> - v<%= pkg.version %>\n" + "<%= pkg.homepage ? \"* \" + pkg.homepage + \"\\n\" : \"\" %>" + "* Copyright (c) <%= grunt.template.today(\"yyyy\") %> <%= pkg.author.name %> <<%= pkg.author.homepage %>>" + " */\n\n"
 
-    # Target-specific file lists and/or options go here.
-    clean: [
-      "app/themes/theme-juice/**/*"
-      "!app/themes/theme-juice/lang/**/*"
-      "!app/themes/theme-juice/favicon.ico"
-      "!app/themes/theme-juice/style.css"
-    ]
+    # Be careful with this. This clears _everything_ within
+    #  the app/themes/theme-juice/ directory
+    clean:
+      theme:
+        src: ["app/themes/theme-juice/**/*"]
+
+    # This create a style.css file required by WordPress
+    "file-creator":
+      options:
+        openFlags: "w+"
+      basic:
+        "app/themes/theme-juice/style.css": (fs, fd, done) ->
+          fs.writeSync fd, grunt.template.process("/*\nTheme Name: <%= pkg.name %>\nAuthor: <%= pkg.author.name %>\nAuthor URI: <%= pkg.author.homepage %>\nDescription: <%= pkg.description %>\nVersion: <%= pkg.version %>\n*/\n\n")
+          done()
 
     browserify:
       dist:
         options:
           global: yes
           banner: "<%= banner %>"
-        files: [
+        files: [{
           src: [
             "src/themes/theme-juice/scripts/**/*.coffee"
             "src/themes/theme-juice/scripts/**/*.js"
           ]
           dest: "app/themes/theme-juice/assets/scripts/main.js"
-        ]
+        }]
 
     compass:
       dist:
@@ -44,40 +47,31 @@ module.exports = (grunt) ->
 
     copy:
       templates:
-        files: [
+        files: [{
           expand: yes
           cwd: "src/themes"
           src: ["**/*.php"]
           dest: "app/themes/"
           rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
-        ]
+        }]
+
+      favicon:
+        files: [{
+          expand: yes
+          cwd: "src/themes/theme-juice"
+          src: ["favicon.ico"]
+          dest: "app/themes/theme-juice/"
+          rename: (dest, src) -> dest + src
+        }]
 
       fonts:
-        files: [
+        files: [{
           expand: yes
-          cwd: "app/themes/theme-juice/assets/fonts/"
+          cwd: "src/themes/theme-juice/fonts"
           src: ["**/*.{woff,woff2,tff,eot,svg,otf}"]
-          dest: "app/themes/theme-juice/assets/fonts"
+          dest: "app/themes/theme-juice/assets/fonts/"
           rename: (dest, src) -> dest + src.replace(/\/fonts\//, "/assets/fonts/")
-        ]
-
-      images:
-        files: [
-          expand: yes
-          cwd: "app/themes/theme-juice/assets/images/"
-          src: ["**/*.{png,jpg,gif}"]
-          dest: "app/themes/theme-juice/assets/images"
-          rename: (dest, src) -> dest + src.replace(/\/images\//, "/assets/images/")
-        ]
-
-      svg:
-        files: [
-          expand: yes
-          cwd: "app/themes/theme-juice/assets/svg/"
-          src: ["**/*.{svg}"]
-          dest: "app/themes/theme-juice/assets/svg"
-          rename: (dest, src) -> dest + src.replace(/\/svg\//, "/assets/svg/")
-        ]
+        }]
 
     cssmin:
       dist:
@@ -88,19 +82,19 @@ module.exports = (grunt) ->
       templates:
         options:
           enableDynamicAttributes: no
-        files: [
+        files: [{
           expand: yes
           cwd: "src/themes"
           src: ["**/*.haml"]
           dest: "app/themes/"
           ext: ".php"
           rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
-        ]
+        }]
 
     uglify:
       options:
         banner: "<%= banner %>"
-      dist: {
+      dist:
         src: ["app/themes/theme-juice/assets/scripts/main.js"]
         dest: "app/themes/theme-juice/assets/scripts/main.min.js"
 
@@ -113,14 +107,14 @@ module.exports = (grunt) ->
           ]
         files: [{
           expand: yes
-          cwd: "app/themes/theme-juice/assets/images/"
+          cwd: "src/themes/theme-juice/images"
           src: ["**/*.{png,jpg,gif}"]
-          dest: "app/themes/theme-juice/assets/images"
+          dest: "app/themes/theme-juice/assets/images/"
         }, {
           expand: yes
-          cwd: "app/themes/theme-juice/assets/svg/"
-          src: ["**/*.{svg}"]
-          dest: "app/themes/theme-juice/assets/svg"
+          cwd: "src/themes/theme-juice/svg"
+          src: ["**/*.svg"]
+          dest: "app/themes/theme-juice/assets/svg/"
         }]
 
     watch:
@@ -179,20 +173,19 @@ module.exports = (grunt) ->
           "src/themes/theme-juice/images/**/*.jpg"
           "src/themes/theme-juice/images/**/*.png"
           "src/themes/theme-juice/images/**/*.gif"
+          "src/themes/theme-juice/svg/**/*.svg"
         ]
-        tasks: ["newer:copy:images"]
-        options:
-          livereload: yes
-
-      svg:
-        files: ["src/themes/theme-juice/svg/**/*.svg"]
-        tasks: ["newer:copy:svg"]
+        tasks: ["newer:imagemin"]
         options:
           livereload: yes
 
   # Default task
   grunt.registerTask "default", [
     "clean"
+    "file-creator"
+    "copy:favicon"
+    "copy:fonts"
+    "imagemin"
     "templates"
     "styles"
     "scripts"
