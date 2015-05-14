@@ -127,5 +127,8 @@
  * @output - Font awesome base styles and icon's ASCII content
  */
 @mixin font-awesome($icon)
-  @extend %font-awesome
   content: map-get($icons, $icon)
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  text-decoration: inherit

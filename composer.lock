@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0eca6c613aa1a67fa79a9439df56cd7b",
+    "hash": "28b4d6052313dc72ec179f4a740aff57",
     "packages": [
         {
             "name": "composer/installers",
@@ -145,29 +145,29 @@
         },
         {
             "name": "produceresults/advanced-custom-fields",
-            "version": "5.2.3",
+            "version": "5.2.4",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/produceresults/advanced-custom-fields.git",
-                "reference": "b8a70c11be674b754189de9bb5c264e7a5020542"
+                "reference": "fbc838eafaece28725e6bcb28105531d91426034"
             },
             "type": "wordpress-plugin",
             "description": "Custom fields. Made easy. Use the Advanced Custom Fields plugin to take full control of your edit screens & custom field data.",
             "homepage": "http://www.advancedcustomfields.com/",
-            "time": "2015-04-24 20:42:44"
+            "time": "2015-05-11 14:22:37"
         },
         {
             "name": "produceresults/formidable",
-            "version": "2.0.04",
+            "version": "2.0.07",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/produceresults/formidable.git",
-                "reference": "6c6364c3be057bc2b461808038629880a7d242fb"
+                "reference": "533b7232463fd1289767bff358d1fef56c56a41c"
             },
             "type": "wordpress-plugin",
             "description": "Create Beautiful WordPress Forms – Fast",
             "homepage": "https://formidablepro.com/",
-            "time": "2015-04-27 14:27:49"
+            "time": "2015-05-13 13:45:07"
         },
         {
             "name": "theme-juice/theme-juice-core",
@@ -343,10 +343,10 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "4.1.1",
+            "version": "4.2.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.2.2.zip",
                 "reference": null,
                 "shasum": null
             },
