@@ -7,6 +7,7 @@
 #  should never be version controlled. These belong on your local development environment
 #  and on the specific stage it's for.
 #
+.env
 .env.*
 !.env.sample
 
