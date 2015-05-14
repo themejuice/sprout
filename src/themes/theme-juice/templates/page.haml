@@ -1,0 +1,23 @@
+-/* Template Name: Page */
+
+- include "partials/header.php"
+
+.content__wrapper
+  .content
+    - if ( have_posts() )
+      - the_post()
+
+      - if ( has_post_thumbnail() )
+        %img(src="#{tj_featured_image("blog-thumb")}" alt="#{tj_title()}")
+
+      %h1 = tj_title()
+
+      - the_content()
+    - else
+      %h4 Sorry, the page could not be displayed.
+
+  // content
+
+  - include "partials/sidebar.php"
+
+- include "partials/footer.php"

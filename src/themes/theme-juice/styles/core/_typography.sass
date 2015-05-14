@@ -1,0 +1,98 @@
+/**
+ * Base
+ */
+body
+  font: 1em/1.5 font("open-sans")
+  color: palette("black")
+
+/**
+ * Paragraphs and quotes
+ */
+// p
+
+q,
+blockquote
+  quotes: "“" "”" "‘" "’"
+  font:
+    size: 1.15em
+    style: italic
+
+  p:before
+    content: open-quote
+
+  p:after
+    content: close-quote
+
+/**
+ * Headers
+ */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6
+  margin: 0.5em 0 0.25em
+
+h1,
+.h1
+  font:
+    size: 2em
+
+h2,
+.h2
+  font:
+    size: 1.875em
+
+h3,
+.h3
+  font:
+    size: 1.625em
+
+h4,
+.h4
+  font:
+    size: 1.25em
+
+h5,
+.h5
+  font:
+    size: 1.25em
+
+h6,
+.h6
+  font:
+    size: 1em
+
+/**
+ * Links
+ */
+a
+  text:
+    decoration: none
+
+  // &:hover
+
+/**
+ * Lists
+ */
+// ul,
+// ol
+
+/**
+ * Modifiers
+ */
+.text-align
+  @each $alignment in "center", "left", "right"
+    &--#{$alignment}
+      text:
+        align: #{$alignment}
+
+      .button
+        margin: 1em auto

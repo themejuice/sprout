@@ -1,0 +1,131 @@
+/**
+ * Clearfix
+ *
+ * @output - Micro clearfix
+ */
+@mixin clearfix
+  zoom: 1
+
+  &:before,
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    overflow: hidden
+
+  &:after
+    clear: both
+
+/**
+ * Define z-index from map
+ *
+ * @param {String} $index               - Alias of z-index
+ * @param {Bool}   $position (relative) - Position context
+ *
+ * @example - How to apply z-index
+ *    ```scss
+ *    @include z-index("goku");
+ *     ```
+ *
+ * @output - Position and z-index props
+ */
+@mixin z-index($index, $position: relative)
+  @if exists($z-index, $index)
+    position: $position
+    z-index: map-get($z-index, $index)
+  @else
+    @warn "Whoa there! Argument `#{$index}` was not found in $z-index map"
+
+/**
+ * Shift columns
+ *
+ * @param {String} $breakpoint        - Breakpoint to apply shift to
+ * @param {Number} $columns           - Amount to shift columns
+ * @param {Bool}   $has-gutter (true) - Add gutter value to shift
+ *
+ * @output - Margin to shift columns
+ */
+@mixin shift($breakpoint, $columns, $has-gutter: true)
+  $width-map: flint-calc-width($breakpoint, $columns)
+  $gutter: if($has-gutter, flint-get-gutter(), 0)
+
+  @include _($breakpoint)
+    @if map-fetch($flint, "settings", "grid") == "fluid"
+      margin-left: (map-get($width-map, "target") + $gutter) / map-get($width-map, "context") * 100%
+    @else
+      margin-left: map-get($width-map, "target") + $gutter
+
+/**
+ * Align element
+ *
+ * @param {String} $alignment
+ * @param {Number} $height
+ *
+ * @example
+ *   ```haml
+ *   %div
+ *     %div= $foo
+ *   ```
+ *
+ *   ```sass
+ *   div
+ *     +align(middle)
+ *   ```
+ *
+ * @output - Styles to align direct children of parent
+ */
+@mixin align($alignment, $height: null)
+  display: table
+
+  & > *
+    display: table-cell
+    vertical-align: $alignment
+    height: $height
+
+/**
+ * Replaces parent selector with selector + modifier
+ *
+ * @param {String} $modifier        - Modifer to append to parent selector
+ * @param {Number} $levels-deep (1) - How many level back to find parent
+ *
+ * @example
+ *   ```sass
+ *   li
+ *     a
+ *       padding:
+ *         left: 1em
+ *
+ *       +parent(":first-of-type")
+ *         padding:
+ *           left: 0
+ *   ```
+ *
+ * @output - New selector list with modifier appended to parent
+ */
+@mixin parent($modifier, $levels-deep: 1)
+  $selectors: ()
+
+  @each $selector-group in &
+    $index: length($selector-group) - $levels-deep
+    $parent: nth($selector-group, $index)
+    $selectors: append($selectors, set-nth($selector-group, $index, $parent + $modifier), "comma")
+
+  @at-root #{$selectors}
+    @content
+
+/**
+ * Use font awesome icon
+ *
+ * @param {String} $icon - Name of the icon
+ *
+ * @example
+ *   ```sass
+ *   a:after
+ *     +font-awesome("facebook")
+ *   ```
+ *
+ * @output - Font awesome base styles and icon's ASCII content
+ */
+@mixin font-awesome($icon)
+  @extend %font-awesome
+  content: map-get($icons, $icon)

@@ -1,0 +1,16 @@
+- $theme->render_head()
+
+.header__wrapper
+  .header
+
+    .header__logo
+      %a(href="#{home_url()}")
+        %img(src="#{tj_image_src("logo.png")}" alt="Theme Juice")
+    // logo
+
+    .header__navigation
+      %i.hamburger.fa.fa-bars
+      - wp_nav_menu( array( "theme_location" => "primary_nav" ) )
+    // nav
+
+// header

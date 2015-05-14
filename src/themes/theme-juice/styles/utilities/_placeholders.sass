@@ -1,0 +1,64 @@
+/**
+ * Strip ul els to bare list
+ *
+ * @example
+ *   ```haml
+ *   %ul
+ *     %li
+ *       %a
+ *     %li
+ *       %a
+ *   ```
+ *
+ *   ```sass
+ *   ul
+ *     @extend %bare-ul
+ *   ```
+ */
+%bare-ul
+  display: block
+  list-style: none
+  margin: 0
+  padding: 0
+
+/**
+ * Justified navigation
+ *
+ * @example
+ *   ```haml
+ *   %ul
+ *     %li
+ *       %a
+ *     %li
+ *       %a
+ *   ```
+ *
+ *   ```sass
+ *   ul
+ *     @extend %justified-navigation
+ *   ```
+ */
+%justified-navigation
+  @extend %bare-ul
+  text-align: justify
+  width: 100%
+  margin: 0 auto
+
+  // Micro clearfix
+  &:after
+    content: " "
+    display: inline-block
+    width: 100%
+
+  & > li
+    +inline-block
+    position: relative
+
+/**
+ * Font awesome base styles
+ */
+%font-awesome
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  text-decoration: inherit

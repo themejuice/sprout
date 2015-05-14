@@ -1,0 +1,110 @@
+/**
+ * Output image url()
+ *
+ * @param {String} $image             - filename of image
+ * @param {String} $path ($image-url) - path for image
+ *
+ * @return {String}
+ */
+@function image-url($image, $path: $image-url)
+  @return url("#{$path}/#{$image}")
+
+/**
+ * Convert pixel to rem
+ *
+ * @param {Number} $px                     - pixel value entered
+ * @param {Number} $base ($base-font-size) - base font size
+ *
+ * @return {Number}
+ */
+@function rem($px, $base: $base-font-size)
+  @return ($px / $base) * 1rem
+
+/**
+ * Fetch value from map
+ *
+ * @param {Map}     $map  - map to fetch value from
+ * @param {ArgList} $keys - list of keys to traverse
+ *
+ * @return {*}
+ */
+@function map-fetch($map, $keys...)
+  $result: $map
+
+  @each $key in $keys
+    @if $result
+      $result: type-of($result) == "map" and map-has-key($result, $key) and map-get($result, $key) or false
+    @else
+      @return false
+
+  @return $result
+
+/**
+ * Check if key exists in map
+ *
+ * @param {Map}    $map   - map to search
+ * @param {String} $value - key to search for
+ *
+ * @return {Bool}
+ */
+@function exists($map, $value...)
+  $is-map: type-of($map) == "map"
+  $top-has-key: $is-map and map-has-key($map, nth($value, 1)) or false
+
+  @if $top-has-key
+    @return true
+  @else if $is-map
+    @each $m, $k in $map
+      @if exists($k, $value...)
+        @return true
+
+  @return false
+
+/**
+ * Fetch color from map
+ *
+ * @param {ArgList} $color - list of colors to traverse
+ *
+ * @example
+ *    ```scss
+ *    palette("blue")
+ *    palette("blue", "lighest")
+ *    palette("blue", $opacity: 0.5)
+ *    ```
+ *
+ * @return {Color}
+ */
+@function palette($color, $shade: "base", $opacity: null)
+  @if exists($colors, $color)
+    $shades: map-fetch($colors, $color)
+
+    @if exists($shades, $shade)
+      $result: map-fetch($shades, $shade)
+
+      @if type-of($opacity) == "number"
+        @return rgba($result, $opacity)
+      @else
+        @return $result
+
+    @else
+      @error "Whoa there! Shade '#{$shade}' does not exist for color '#{$color}'."
+
+  @error "Whoa there! Color '#{$color}' does not exist within the '$colors' map."
+
+/**
+ * Fetch font stack from map
+ *
+ * @param {String} $font - Name of font stack
+ *
+ * @example
+ *    ```scss
+ *    font("lato")
+ *    ```
+ *
+ * @return {List} - list of font stack
+ */
+@function font($font)
+  @if exists($fonts, $font)
+    @return map-fetch($fonts, $font)
+  @else
+    @error "Whoa there! Font '#{$font}' does not exist within the '$fonts' map."

@@ -1,0 +1,22 @@
+/**
+ * Hacks go here
+ */
+
+/**
+ * Hide all form errors that aren't the first one
+ *
+ * Formidable repeats the error message each time a submission
+ *   occurs, so they continue to stack up. This fixes the issue.
+ */
+$frm_errors: () !global
+
+@for $i from 2 through 10
+  $frm_error: ()
+
+  @for $n from 1 through $i
+    $frm_error: append($frm_error, if($n == 1, "", "~ ") + ".frm_error", "space")
+
+  $frm_errors: append($frm_errors, $frm_error, "comma") !global
+
+#{$frm_errors}
+  display: none

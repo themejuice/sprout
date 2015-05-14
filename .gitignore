@@ -1,0 +1,66 @@
+!.gitkeep
+
+#
+# Environments
+#
+# Do _not_ version control environment files. These contain database credentials, and those
+#  should never be version controlled. These belong on your local development environment
+#  and on the specific stage it's for.
+#
+.env.*
+!.env.sample
+
+#
+# Hidden folders/files
+#
+.DS_Store
+.sass-cache/
+
+#
+# Deployment
+#
+.capistrano/
+
+#
+# Database
+#
+backup/
+*.sql
+
+#
+# WordPress
+#
+# Most of this is pulled in through Composer, so doesn't need to be version controlled. Exceptions
+#  to this are plugins, which should be installed through Composer and not dropped in.
+#
+wp/*
+!wp/.gitkeep
+app/themes/**/*.php
+app/mu-plugins/*
+!app/mu-plugins/.gitkeep
+app/plugins/*
+!app/plugins/.gitkeep
+app/uploads/*
+!app/uploads/.gitkeep
+app/upgrade/
+app/cache/
+wp-cli.local.yml
+
+#
+# Composer
+#
+# All vendor dependencies are pulled in through Composer itself, thus version control isn't needed.
+#
+vendor/*
+
+#
+# Vagrant/VVV files for local development
+#
+vvv-nginx.conf
+vvv-hosts
+
+#
+# Node
+#
+node_modules/*
+npm-debug.log

@@ -1,0 +1,18 @@
+- include "partials/header.php"
+
+.content__wrapper
+  .content
+    - if ( have_posts() )
+      - the_post()
+
+      %h1 = the_title()
+      %p = the_time("F j, Y")
+      - the_content()
+    - else
+      %h4 Sorry, the page could not be displayed.
+
+  // content
+
+  - include "partials/sidebar.php"
+
+- include "partials/footer.php"

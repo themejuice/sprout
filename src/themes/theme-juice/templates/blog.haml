@@ -1,0 +1,45 @@
+- /* Template Name: Blog */
+
+- include "partials/header.php"
+
+.content__wrapper
+  .content
+    %h1 = tj_title()
+
+    - $paged = tj_query_var()
+    - $posts = new WP_Query( array( "post_type" => "post", "showposts" => 5, "paged" => $paged ) )
+
+    - if ( $posts->have_posts() )
+      - while ( $posts->have_posts() )
+        - $posts->the_post()
+
+        .blog-page__post
+
+          - if ( has_post_thumbnail() )
+            .blog-page__post__thumb
+              .blog-page__post__thumb__overflow
+                %img(src="#{tj_featured_image("blog-thumb")}" alt="#{tj_title()}")
+
+          .blog-page__post__content
+            %a(href="#{the_permalink()}")
+              %h2 = tj_title()
+            %p = the_time("F j, Y")
+            %p = tj_excerpt()
+            %a.button(href="#{the_permalink()}")
+              Read More
+          %hr
+
+        // post
+
+      .pagination
+        = paginate_links( array( "current" => max(1, $paged), "total" => $posts->max_num_pages ) )
+    - else
+      %h4 Sorry, there are currently no posts for #{tj_title()}.
+
+    - wp_reset_query()
+
+  // content
+
+  - include "partials/sidebar.php"
+
+- include "partials/footer.php"

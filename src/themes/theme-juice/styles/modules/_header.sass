@@ -1,0 +1,38 @@
+/**
+ * Header
+ */
+.header
+  +_(container, clear)
+
+  &__wrapper
+    +z-index(goku)
+
+/**
+ * Logo
+ */
+.header__logo
+  +_(4)
+
+/**
+ * Navigation
+ */
+.header__navigation
+  +_(12 8 8 4)
+  padding: 2em 0
+
+  /**
+   * Hamburger menu
+   */
+  .hamburger
+    font:
+      size: 2em
+    cursor: pointer
+
+    +_(greater than tablet)
+      display: none
+
+  ul
+    @extend %justified-navigation
+
+    +_(less than laptop)
+      display: none

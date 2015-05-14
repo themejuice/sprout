@@ -1,0 +1,553 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "0eca6c613aa1a67fa79a9439df56cd7b",
+    "packages": [
+        {
+            "name": "composer/installers",
+            "version": "v1.0.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "reference": "d64e23fce42a4063d63262b19b8e7c0f3b5e4c45",
+                "shasum": ""
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "Composer\\Installers\\Installer",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\Installers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "http://composer.github.com/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Hurad",
+                "MODX Evo",
+                "OXID",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "fuelphp",
+                "grav",
+                "installer",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "zend",
+                "zikula"
+            ],
+            "time": "2015-02-18 17:17:01"
+        },
+        {
+            "name": "fancyguy/webroot-installer",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fancyguy/webroot-installer.git",
+                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fancyguy/webroot-installer/zipball/a2d5c2e149d837e5580a62a91d3c91577aa30d28",
+                "reference": "a2d5c2e149d837e5580a62a91d3c91577aa30d28",
+                "shasum": ""
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "composer-installer",
+            "extra": {
+                "class": "FancyGuy\\Composer\\WebrootInstaller"
+            },
+            "autoload": {
+                "psr-0": {
+                    "FancyGuy\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Buzonas",
+                    "email": "steve@fancyguy.com",
+                    "homepage": "http://www.stevebuzonas.com"
+                }
+            ],
+            "description": "A composer installer for libraries that live in an application webroot.",
+            "homepage": "http://fancyguy.github.com/webroot-installer/",
+            "time": "2013-03-15 17:51:14"
+        },
+        {
+            "name": "produceresults/advanced-custom-fields",
+            "version": "5.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/produceresults/advanced-custom-fields.git",
+                "reference": "b8a70c11be674b754189de9bb5c264e7a5020542"
+            },
+            "type": "wordpress-plugin",
+            "description": "Custom fields. Made easy. Use the Advanced Custom Fields plugin to take full control of your edit screens & custom field data.",
+            "homepage": "http://www.advancedcustomfields.com/",
+            "time": "2015-04-24 20:42:44"
+        },
+        {
+            "name": "produceresults/formidable",
+            "version": "2.0.04",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/produceresults/formidable.git",
+                "reference": "6c6364c3be057bc2b461808038629880a7d242fb"
+            },
+            "type": "wordpress-plugin",
+            "description": "Create Beautiful WordPress Forms – Fast",
+            "homepage": "https://formidablepro.com/",
+            "time": "2015-04-27 14:27:49"
+        },
+        {
+            "name": "theme-juice/theme-juice-core",
+            "version": "0.2.3",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ezekg/theme-juice-core.git",
+                "reference": "9b78cc46048dc29417b93bee9dd7df7af3db6b40"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "theme-juice/theme-juice-functions": "Include an array of commonly used helper functions.",
+                "theme-juice/theme-juice-shortcodes": "Include an array of commonly used shortcodes."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ThemeJuice\\": "theme-juice/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ezekiel Gabrielse",
+                    "email": "ezekiel@produceresults.com"
+                }
+            ],
+            "description": "Core files for Theme Juice framework",
+            "homepage": "https://github.com/theme-juice/theme-juice-core",
+            "keywords": [
+                "WordPress",
+                "coffeescript",
+                "framework",
+                "haml",
+                "mthaml",
+                "sass",
+                "theme"
+            ],
+            "time": "2015-04-27 20:58:36"
+        },
+        {
+            "name": "theme-juice/theme-juice-functions",
+            "version": "0.1.24",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ezekg/theme-juice-functions.git",
+                "reference": "bde2d0ec256a16c94e34afba5fbf10d946cedf3b"
+            },
+            "require": {
+                "theme-juice/theme-juice-core": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ThemeJuice\\": "theme-juice/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ezekiel Gabrielse",
+                    "email": "ezekiel@produceresults.com"
+                }
+            ],
+            "description": "Functions for Theme Juice framework",
+            "homepage": "https://github.com/theme-juice/theme-juice-functions",
+            "keywords": [
+                "WordPress",
+                "coffeescript",
+                "framework",
+                "haml",
+                "mthaml",
+                "sass",
+                "theme"
+            ],
+            "time": "2015-05-01 13:22:41"
+        },
+        {
+            "name": "theme-juice/theme-juice-shortcodes",
+            "version": "0.1.8",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ezekg/theme-juice-shortcodes.git",
+                "reference": "068fb9ea2bf3aa0118a5e8e98d04efaa79c84a3e"
+            },
+            "require": {
+                "theme-juice/theme-juice-core": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ThemeJuice\\": "theme-juice/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ezekiel Gabrielse",
+                    "email": "ezekiel@produceresults.com"
+                }
+            ],
+            "description": "Shortcodes for Theme Juice framework",
+            "homepage": "https://github.com/theme-juice/theme-juice-shortcodes",
+            "keywords": [
+                "WordPress",
+                "coffeescript",
+                "framework",
+                "haml",
+                "mthaml",
+                "sass",
+                "theme"
+            ],
+            "time": "2015-02-20 23:23:25"
+        },
+        {
+            "name": "vlucas/phpdotenv",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vlucas/phpdotenv.git",
+                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
+                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Dotenv": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Vance Lucas",
+                    "email": "vance@vancelucas.com",
+                    "homepage": "http://www.vancelucas.com"
+                }
+            ],
+            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+            "homepage": "http://github.com/vlucas/phpdotenv",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "time": "2014-12-05 15:19:21"
+        },
+        {
+            "name": "wordpress/wordpress",
+            "version": "4.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "fancyguy/webroot-installer": "1.1.0"
+            },
+            "type": "webroot"
+        },
+        {
+            "name": "wpackagist-plugin/custom-post-type-ui",
+            "version": "1.0.8",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.0.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.0.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/custom-post-type-ui/"
+        },
+        {
+            "name": "wpackagist-plugin/google-analytics-for-wordpress",
+            "version": "5.4.2",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "reference": "tags/5.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "2.1.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/2.1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "manovotny/wptest",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:manovotny/wptest.git",
+                "reference": "841f3fea2991c2e5104de847da2182996962a24f"
+            },
+            "type": "library",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Novotny",
+                    "email": "manovotny@gmail.com",
+                    "homepage": "http://manovotny.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "WP Test - The Best Tests For WordPress.",
+            "homepage": "http://wptest.io",
+            "keywords": [
+                "data",
+                "export",
+                "import",
+                "tests",
+                "unit tests",
+                "wordpress"
+            ],
+            "time": "2014-09-10 03:08:59"
+        },
+        {
+            "name": "x-team/wp-cli-ssh",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/x-team/wp-cli-ssh.git",
+                "reference": "7695c9ebea9ea9c51799ea88611aef0c0a4e5dba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/x-team/wp-cli-ssh/zipball/7695c9ebea9ea9c51799ea88611aef0c0a4e5dba",
+                "reference": "7695c9ebea9ea9c51799ea88611aef0c0a4e5dba",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "wp-cli-ssh.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Bardo",
+                    "email": "jonathan.bardo@x-team.com",
+                    "homepage": "https://github.com/jonathanbardo",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Weston Ruter",
+                    "email": "weston@x-team.com",
+                    "homepage": "http://weston.ruter.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Invoke WP-CLI on another server via SSH from local machine",
+            "homepage": "https://github.com/x-team/wp-cli-ssh",
+            "keywords": [
+                "remote",
+                "ssh",
+                "wp-cli"
+            ],
+            "time": "2014-06-06 19:16:44"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "x-team/wp-cli-ssh": 20
+    },
+    "prefer-stable": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}
