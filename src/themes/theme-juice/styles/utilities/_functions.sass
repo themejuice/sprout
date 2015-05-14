@@ -98,12 +98,12 @@
  *
  * @example
  *    ```scss
- *    font("lato")
+ *    stack("lato")
  *    ```
  *
  * @return {List} - list of font stack
  */
-@function font($font)
+@function stack($font)
   @if exists($fonts, $font)
     @return map-fetch($fonts, $font)
   @else

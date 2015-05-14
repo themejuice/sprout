@@ -192,6 +192,18 @@ module.exports = (grunt) ->
     "watch"
   ]
 
+  # Build task
+  grunt.registerTask "build", [
+    "clean"
+    "file-creator"
+    "copy:favicon"
+    "copy:fonts"
+    "imagemin"
+    "templates"
+    "styles"
+    "scripts"
+  ]
+
   # Templates
   grunt.registerTask "templates", [
     "copy:templates"
