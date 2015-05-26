@@ -37,7 +37,7 @@ $theme = new Theme( array(
     // Theme stylesheet
     "theme-juice-styles" => array(
       "type" => "style",
-      "location" => "assets/css/main.css",
+      "location" => "assets/css/main.min.css",
       "version" => "0.1.0",
     ),
   ),
