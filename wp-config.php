@@ -38,8 +38,6 @@ Dotenv::required(array(
   "DB_USER",
   "DB_PASSWORD",
   "DB_HOST",
-  "WP_STAGE",
-  "WP_DEBUG",
   "WP_HOME",
   "WP_SITEURL"
 ));
@@ -47,7 +45,7 @@ Dotenv::required(array(
 /**
  * Stage
  */
-define( "WP_STAGE", getenv("WP_STAGE") );
+define( "WP_ENV", getenv("WP_ENV") ?: "production" );
 
 /**
  * Database
@@ -59,8 +57,13 @@ define( "DB_HOST", getenv("DB_HOST") );
 
 /**
  * Debug
+ *
+ * This filters the WP_DEBUG declaration from .env to a
+ *  boolean. Accepts strings like 'true', 'yes', etc.
+ *
+ * @see http://php.net/manual/en/function.filter-var.php
  */
-define( "WP_DEBUG", getenv("WP_DEBUG") );
+define( "WP_DEBUG", filter_var( getenv("WP_DEBUG"), FILTER_VALIDATE_BOOLEAN ) );
 
 /**
  * URLs
