@@ -171,11 +171,11 @@
         },
         {
             "name": "theme-juice/theme-juice-core",
-            "version": "0.3.0",
+            "version": "0.3.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-core.git",
-                "reference": "fc194ff3af6fd10f18edf4a30fb5b3aeb0e7e510"
+                "reference": "2de812fb1466bb3e20a10bb25705ee79cf565b1e"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -206,7 +206,7 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-05-26 19:38:20"
+            "time": "2015-05-26 21:58:38"
         },
         {
             "name": "theme-juice/theme-juice-functions",
