@@ -45,7 +45,7 @@ Dotenv::required(array(
 /**
  * Stage
  */
-define( "WP_ENV", getenv("WP_ENV") ?: "production" );
+define( "WP_ENV", getenv("WP_ENV") ?: "development" );
 
 /**
  * Database
