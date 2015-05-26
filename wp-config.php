@@ -120,6 +120,7 @@ define( "WP_LANG_DIR", WP_CONTENT_DIR . "/lang" );
  */
 define( "WP_DEFAULT_THEME", "theme-juice" );
 define( "DISALLOW_FILE_EDIT", true );
+define( "DISABLE_WP_CRON", true );
 
 /**
  * Absolute path to WP
