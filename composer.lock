@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "28b4d6052313dc72ec179f4a740aff57",
+    "hash": "6f6f2a5b8086d34dbadc7828df81dca4",
     "packages": [
         {
             "name": "composer/installers",
@@ -171,23 +171,19 @@
         },
         {
             "name": "theme-juice/theme-juice-core",
-            "version": "0.2.3",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-core.git",
-                "reference": "9b78cc46048dc29417b93bee9dd7df7af3db6b40"
+                "reference": "fc194ff3af6fd10f18edf4a30fb5b3aeb0e7e510"
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "suggest": {
-                "theme-juice/theme-juice-functions": "Include an array of commonly used helper functions.",
-                "theme-juice/theme-juice-shortcodes": "Include an array of commonly used shortcodes."
-            },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ThemeJuice\\": "theme-juice/"
+                    "ThemeJuice\\": "ThemeJuice/"
                 }
             },
             "license": [
@@ -210,15 +206,15 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-04-27 20:58:36"
+            "time": "2015-05-26 19:38:20"
         },
         {
             "name": "theme-juice/theme-juice-functions",
-            "version": "0.1.24",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-functions.git",
-                "reference": "bde2d0ec256a16c94e34afba5fbf10d946cedf3b"
+                "reference": "472b77f1dbd77c36030d58732f87cd243e45dea9"
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -226,7 +222,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ThemeJuice\\": "theme-juice/"
+                    "ThemeJuice\\": "ThemeJuice/"
                 }
             },
             "license": [
@@ -249,15 +245,15 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-05-01 13:22:41"
+            "time": "2015-05-26 19:38:32"
         },
         {
             "name": "theme-juice/theme-juice-shortcodes",
-            "version": "0.1.8",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-shortcodes.git",
-                "reference": "068fb9ea2bf3aa0118a5e8e98d04efaa79c84a3e"
+                "reference": "08c6871752164432be8053f2bad199dd6a6dff73"
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -265,7 +261,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ThemeJuice\\": "theme-juice/"
+                    "ThemeJuice\\": "ThemeJuice/"
                 }
             },
             "license": [
@@ -288,7 +284,7 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-02-20 23:23:25"
+            "time": "2015-05-26 19:56:48"
         },
         {
             "name": "vlucas/phpdotenv",
