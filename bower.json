@@ -5,7 +5,6 @@
     "normalize.scss": "~3.0.2",
     "font-awesome": "~4.3.0",
     "jquery": "1.11.2",
-    "waypoints": "~3.1.1",
-    "modernizr": "~2.8.3"
+    "waypoints": "~3.1.1"
   }
 }

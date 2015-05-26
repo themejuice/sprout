@@ -1,7 +1,6 @@
 "use-strict"
 
 require "jquery"
-require "modernizr"
 require "waypoints"
 
 Parallax = require "./parallax.coffee"
