@@ -1,6 +1,7 @@
 commands:
   install:
     - composer install
+    - grunt build
   watch:
     - grunt %args%
   vendor:
