@@ -25,14 +25,6 @@ $theme = new Theme( array(
       "external" => true,
     ),
 
-    // Font awesome CDN
-    "font-awesome" => array(
-      "type" => "style",
-      "location" => "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css",
-      "version" => "4.2.0",
-      "external" => true,
-    ),
-
     // Theme scripts
     "theme-juice-scripts" => array(
       "type" => "script",

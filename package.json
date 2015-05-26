@@ -1,5 +1,5 @@
 {
-  "name": "ThemeJuiceStarter",
+  "name": "Trellis",
   "description": "Theme designed and developed by Produce Results",
   "homepage": "http://themejuice.it",
   "version": "0.1.0",
@@ -7,9 +7,7 @@
     "name": "Produce Results",
     "homepage": "http://produceresults.com"
   },
-  "dependencies": {
-    "waypoints": "^3.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify-shim": "~3.2.0",
     "coffeeify": "^1.1.0",
@@ -31,10 +29,13 @@
     "time-grunt": "^1.0.0"
   },
   "browser": {
-    "waypoints": "./node_modules/waypoints/lib/jquery.waypoints.min.js"
+    "waypoints": "./bower_components/waypoints/lib/jquery.waypoints.js",
+    "modernizr": "./bower_components/modernizr/modernizr.js"
   },
   "browserify-shim": {
-    "jquery": "global:$"
+    "jquery": "global:$",
+    "waypoints": "Waypoints",
+    "modernizr": "Modernizr"
   },
   "browserify": {
     "transform": [

@@ -2,6 +2,7 @@ commands:
   install:
     - composer install
     - npm install
+    - bower install
     - grunt build
   watch:
     - grunt %args%

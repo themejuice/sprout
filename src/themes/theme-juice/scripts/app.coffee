@@ -1,10 +1,12 @@
 "use-strict"
 
-$           = require "jquery"
-$.waypoints = require "waypoints"
-Parallax    = require "./parallax.coffee"
-Reveal      = require "./reveal.coffee"
-Slider      = require "./slider.coffee"
+require "jquery"
+require "modernizr"
+require "waypoints"
+
+Parallax = require "./parallax.coffee"
+Reveal   = require "./reveal.coffee"
+Slider   = require "./slider.coffee"
 
 $(document).ready ->
 

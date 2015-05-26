@@ -65,4 +65,5 @@ vvv-hosts
 # Node
 #
 node_modules/*
+bower_components/*
 npm-debug.log
