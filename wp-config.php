@@ -72,9 +72,26 @@ define( "WP_HOME", getenv("WP_HOME") );
 define( "WP_SITEURL", getenv("WP_SITEURL") );
 
 /**
+ * Authentication Unique Keys and Salts
+ */
+define( "AUTH_KEY", getenv("AUTH_KEY") ?: "" );
+define( "SECURE_AUTH_KEY", getenv("SECURE_AUTH_KEY") ?: "" );
+define( "LOGGED_IN_KEY", getenv("LOGGED_IN_KEY") ?: "" );
+define( "NONCE_KEY", getenv("NONCE_KEY") ?: "" );
+define( "AUTH_SALT", getenv("AUTH_SALT") ?: "" );
+define( "SECURE_AUTH_SALT", getenv("SECURE_AUTH_SALT") ?: "" );
+define( "LOGGED_IN_SALT", getenv("LOGGED_IN_SALT") ?: "" );
+define( "NONCE_SALT", getenv("NONCE_SALT") ?: "" );
+
+/**
  * Database Charset to use in creating database tables.
  */
 define( "DB_CHARSET", "utf8" );
+
+/**
+ * The Database Collate type. Don't change this if in doubt.
+ */
+define( "DB_COLLATE", "" );
 
 /**
  * WordPress Database Table prefix.
@@ -82,7 +99,7 @@ define( "DB_CHARSET", "utf8" );
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = "wp_";
+$table_prefix = getenv("DB_TABLE_PREFIX") ?: "wp_";
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -92,7 +109,7 @@ $table_prefix  = "wp_";
  * de_DE.mo to wp-content/languages and set WPLANG to "de_DE" to enable German
  * language support.
  */
-define( "WPLANG", "" );
+define( "WPLANG", getenv("WP_LANG") ?: "" );
 
 /**
  * Custom content directory
