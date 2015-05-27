@@ -42,7 +42,7 @@ module.exports = (grunt) ->
           cssDir: "app/themes/theme-juice/assets/css"
           httpPath: "/"
           outputStyle: "expanded"
-          require: ["flint", "sass-globbing", "graphite", "SassyExport", "stampy"]
+          require: ["flint", "sass-globbing", "graphite", "sassy-export", "stampy"]
           sassDir: "src/themes/theme-juice/styles"
 
     copy:
