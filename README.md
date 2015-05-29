@@ -8,7 +8,7 @@
   * [Bower](http://bower.io/)
 
 ## Installation
-After all of the required tools are properly installed and they're executable without `sudo`, run `tj install` to install all dependencies defined in the `Juicefile`. To set up a new project and development site, run `tj new` and follow the prompts. To set up a development site for an existing project, run `tj setup` and follow the prompts.
+After all of the required tools are properly installed and they're executable without `sudo`, run `tj install` to execute the theme installation defined in the `Juicefile`. To set up a new project and development site, run `tj new` and follow the prompts. To set up a development site for an existing project, run `tj setup` and follow the prompts.
 
 ----
 
