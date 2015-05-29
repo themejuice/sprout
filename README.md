@@ -1,4 +1,4 @@
-# Theme Juice
+# Trellis
 
 ## Requirements
   * [Composer](https://getcomposer.org/)
