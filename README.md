@@ -1,6 +1,7 @@
 # Trellis
 
 ## Requirements
+  * [Theme Juice CLI](https://github.com/ezekg/theme-juice-cli)
   * [Composer](https://getcomposer.org/)
   * [WP-CLI](http://wp-cli.org/)
   * [NPM](https://www.npmjs.com/) ([Here's a good guide on properly installing NPM to not need `sudo`](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/))
