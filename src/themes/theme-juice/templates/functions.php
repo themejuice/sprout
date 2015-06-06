@@ -9,8 +9,12 @@ $theme = new Theme( array(
 
   // Packages to load
   "packages" => array(
-    "shortcodes" => array(),
     "functions" => array(),
+    "shortcodes" => array(
+      "button" => true,
+      "colors" => true,
+      "fonts" => true,
+    ),
   ),
 
   // Assets to enqueue
@@ -50,6 +54,5 @@ $theme = new Theme( array(
  */
 register_nav_menus( array(
   "primary_nav" => __( "Primary Navigation", "theme-juice" ),
-  "secondary_nav" => __( "Secondary Navigation", "theme-juice" ),
   "footer_nav" => __( "Footer Navigation", "theme-juice" ),
 ));

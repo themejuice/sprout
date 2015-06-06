@@ -18,7 +18,7 @@
           - if ( has_post_thumbnail() )
             .blog-page__post__thumb
               .blog-page__post__thumb__overflow
-                %img(src="#{tj_featured_image("blog-thumb")}" alt="#{tj_title()}")
+                %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
 
           .blog-page__post__content
             %a(href="#{the_permalink()}")

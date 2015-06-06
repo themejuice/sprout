@@ -29,11 +29,9 @@
     "time-grunt": "^1.0.0"
   },
   "browser": {
-    "waypoints": "./bower_components/waypoints/lib/jquery.waypoints.js"
   },
   "browserify-shim": {
-    "jquery": "global:$",
-    "waypoints": "Waypoints"
+    "jquery": "global:$"
   },
   "browserify": {
     "transform": [

@@ -28,18 +28,6 @@
       "url": "git@github.com:ezekg/theme-juice-shortcodes.git"
     },
     {
-      "type": "git",
-      "url": "git@github.com:manovotny/wptest.git"
-    },
-    {
-      "type": "git",
-      "url": "https://bitbucket.org/produceresults/advanced-custom-fields.git"
-    },
-    {
-      "type": "git",
-      "url": "https://bitbucket.org/produceresults/formidable.git"
-    },
-    {
       "type": "composer",
       "url": "http://wpackagist.org"
     }
@@ -57,13 +45,10 @@
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/custom-post-type-ui": "*",
     "wpackagist-plugin/google-analytics-for-wordpress": "*",
-    "wpackagist-plugin/wordpress-seo": "*",
-    "produceresults/advanced-custom-fields": "*",
-    "produceresults/formidable": "*"
+    "wpackagist-plugin/wordpress-seo": "*"
   },
   "require-dev": {
-    "x-team/wp-cli-ssh": "dev-master",
-    "manovotny/wptest": "*"
+    "x-team/wp-cli-ssh": "dev-master"
   },
   "extra": {
     "webroot-dir": "wp",

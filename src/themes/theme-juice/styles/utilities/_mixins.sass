@@ -116,19 +116,17 @@
 /**
  * Use font awesome icon
  *
- * @param {String} $icon - Name of the icon
+ * @param {String} $fa-icon - Variable name of the icon. See '_variables.scss'
+ *   within the font awesome lib for the full list of variables
  *
  * @example
  *   ```sass
  *   a:after
- *     +font-awesome("facebook")
+ *     +icon("facebook")
  *   ```
  *
  * @output - Font awesome base styles and icon's ASCII content
  */
-@mixin font-awesome($icon)
-  content: map-get($icons, $icon)
-  font-family: FontAwesome
-  font-style: normal
-  font-weight: normal
-  text-decoration: inherit
+@mixin icon($fa-var-icon)
+  +fa-icon
+  content: $fa-var-icon
