@@ -23,10 +23,9 @@ $theme = new Theme( array(
     // jQuery CDN
     "jquery" => array(
       "type" => "script",
-      "location" => "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js",
+      "location" => "assets/scripts/jquery.min.js",
       "version" => "1.11.2",
       "in_footer" => true,
-      "external" => true,
     ),
 
     // Theme scripts
