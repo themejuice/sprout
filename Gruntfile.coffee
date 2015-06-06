@@ -4,9 +4,21 @@ module.exports = (grunt) ->
   require("jit-grunt") grunt,
     haml: "grunt-haml-php"
 
+  require("time-grunt") grunt
+
   grunt.initConfig
     pkg: grunt.file.readJSON "package.json"
     banner: "/*! <%= pkg.name %> - v<%= pkg.version %>\n" + "<%= pkg.homepage ? \"* \" + pkg.homepage + \"\\n\" : \"\" %>" + "* Copyright (c) <%= grunt.template.today(\"yyyy\") %> <%= pkg.author.name %> <<%= pkg.author.homepage %>>" + " */\n\n"
+
+    autoprefixer:
+      options: [
+        'ie >= 8'
+        'Firefox >= 4'
+        'iOS >= 6'
+      ]
+      dist:
+        files:
+          "app/themes/theme-juice/assets/css/main.css": ["app/themes/theme-juice/assets/css/main.css"]
 
     # Be careful with this. This clears _everything_ within
     #  the app/themes/theme-juice/ directory
@@ -23,18 +35,13 @@ module.exports = (grunt) ->
           fs.writeSync fd, grunt.template.process("/*\nTheme Name: <%= pkg.name %>\nAuthor: <%= pkg.author.name %>\nAuthor URI: <%= pkg.author.homepage %>\nDescription: <%= pkg.description %>\nVersion: <%= pkg.version %>\n*/\n\n")
           done()
 
-    browserify:
-      dist:
-        options:
-          global: yes
-          banner: "<%= banner %>"
-        files: [{
-          src: [
-            "src/themes/theme-juice/scripts/**/*.coffee"
-            "src/themes/theme-juice/scripts/**/*.js"
-          ]
-          dest: "app/themes/theme-juice/assets/scripts/main.js"
-        }]
+    coffee:
+      compile:
+        expand: true
+        cwd: "src/themes"
+        src: ["**/*.coffee"]
+        dest: "src/themes"
+        ext: ".js"
 
     compass:
       dist:
@@ -45,14 +52,27 @@ module.exports = (grunt) ->
           require: ["flint", "sass-globbing", "graphite", "sassy-export", "stampy"]
           sassDir: "src/themes/theme-juice/styles"
 
+    concat:
+      options:
+        banner: "<%= banner %>"
+
+      dist:
+        src: [
+          # "bower_components/waypoints/lib/jquery.waypoints.js"
+          "src/themes/theme-juice/scripts/parallax.js"
+          "src/themes/theme-juice/scripts/reveal.js"
+          "src/themes/theme-juice/scripts/slider.js"
+          "src/themes/theme-juice/scripts/app.js"
+        ]
+        dest: "app/themes/theme-juice/assets/scripts/main.js"
+
     copy:
-      templates:
+      custom:
         files: [{
           expand: yes
-          cwd: "src/themes"
-          src: ["**/*.php"]
-          dest: "app/themes/"
-          rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
+          cwd: "src/themes/theme-juice/custom"
+          src: ["**/*.*"]
+          dest: "app/themes/theme-juice/custom/"
         }]
 
       favicon:
@@ -71,6 +91,28 @@ module.exports = (grunt) ->
           src: ["**/*.{woff,woff2,tff,eot,svg,otf}"]
           dest: "app/themes/theme-juice/assets/fonts/"
           rename: (dest, src) -> dest + src.replace(/\/fonts\//, "/assets/fonts/")
+        },
+        # FontAwesome
+        {
+          expand: true
+          cwd: "bower_components/font-awesome/fonts"
+          src: ["**/*.*"]
+          dest: "app/themes/theme-juice/assets/fonts/"
+        }]
+
+      scripts:
+        files:
+          #jQuery
+          "app/themes/theme-juice/assets/scripts/jquery.min.js" : ["bower_components/jquery/dist/jquery.min.js"]
+          "app/themes/theme-juice/assets/scripts/jquery.min.map" : ["bower_components/jquery/dist/jquery.min.map"]
+
+      templates:
+        files: [{
+          expand: yes
+          cwd: "src/themes"
+          src: ["**/*.php"]
+          dest: "app/themes/"
+          rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
         }]
 
     cssmin:
@@ -91,13 +133,6 @@ module.exports = (grunt) ->
           rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
         }]
 
-    uglify:
-      options:
-        banner: "<%= banner %>"
-      dist:
-        src: ["app/themes/theme-juice/assets/scripts/main.js"]
-        dest: "app/themes/theme-juice/assets/scripts/main.min.js"
-
     imagemin:
       dist:
         options:
@@ -116,6 +151,13 @@ module.exports = (grunt) ->
           src: ["**/*.svg"]
           dest: "app/themes/theme-juice/assets/svg/"
         }]
+
+    uglify:
+      options:
+        banner: "<%= banner %>"
+      dist:
+        src: ["app/themes/theme-juice/assets/scripts/main.js"]
+        dest: "app/themes/theme-juice/assets/scripts/main.min.js"
 
     watch:
       gruntfile:
@@ -181,14 +223,7 @@ module.exports = (grunt) ->
 
   # Default task
   grunt.registerTask "default", [
-    "clean"
-    "file-creator"
-    "copy:favicon"
-    "copy:fonts"
-    "imagemin"
-    "templates"
-    "styles"
-    "scripts"
+    "build"
     "watch"
   ]
 
@@ -196,12 +231,18 @@ module.exports = (grunt) ->
   grunt.registerTask "build", [
     "clean"
     "file-creator"
-    "copy:favicon"
-    "copy:fonts"
     "imagemin"
+    "assets"
     "templates"
     "styles"
     "scripts"
+  ]
+
+  # Assets
+  grunt.registerTask "assets", [
+    "copy:custom"
+    "copy:favicon"
+    "copy:fonts"
   ]
 
   # Templates
@@ -213,11 +254,14 @@ module.exports = (grunt) ->
   # Styles
   grunt.registerTask "styles", [
     "compass"
+    "autoprefixer"
     "cssmin"
   ]
 
   # Scripts
   grunt.registerTask "scripts", [
-    "browserify"
+    "copy:scripts"
+    "coffee"
+    "concat"
     "uglify"
   ]
