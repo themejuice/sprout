@@ -12,9 +12,9 @@ module.exports = (grunt) ->
 
     autoprefixer:
       options: [
-        'ie >= 8'
-        'Firefox >= 4'
-        'iOS >= 6'
+        "ie >= 8"
+        "Firefox >= 4"
+        "iOS >= 6"
       ]
       dist:
         files:
@@ -37,6 +37,9 @@ module.exports = (grunt) ->
 
     coffee:
       compile:
+        options:
+          bare: true
+          # sourceMap: true
         expand: true
         cwd: "src/themes"
         src: ["**/*.coffee"]
@@ -58,7 +61,10 @@ module.exports = (grunt) ->
 
       dist:
         src: [
-          # "bower_components/waypoints/lib/jquery.waypoints.js"
+          "src/themes/theme-juice/scripts/vendor/*.js"
+          "src/themes/theme-juice/scripts/Parallax.js"
+          "src/themes/theme-juice/scripts/Tooltip.js"
+          "src/themes/theme-juice/scripts/Product.js"
           "src/themes/theme-juice/scripts/app.js"
         ]
         dest: "app/themes/theme-juice/assets/scripts/main.js"
