@@ -59,9 +59,6 @@ module.exports = (grunt) ->
       dist:
         src: [
           # "bower_components/waypoints/lib/jquery.waypoints.js"
-          "src/themes/theme-juice/scripts/parallax.js"
-          "src/themes/theme-juice/scripts/reveal.js"
-          "src/themes/theme-juice/scripts/slider.js"
           "src/themes/theme-juice/scripts/app.js"
         ]
         dest: "app/themes/theme-juice/assets/scripts/main.js"
