@@ -99,9 +99,9 @@ module.exports = (grunt) ->
 
       scripts:
         files:
-          #jQuery
-          "app/themes/theme-juice/assets/scripts/jquery.min.js" : ["bower_components/jquery/dist/jquery.min.js"]
-          "app/themes/theme-juice/assets/scripts/jquery.min.map" : ["bower_components/jquery/dist/jquery.min.map"]
+          # jQuery
+          "app/themes/theme-juice/assets/scripts/jquery.min.js": ["bower_components/jquery/dist/jquery.min.js"]
+          "app/themes/theme-juice/assets/scripts/jquery.min.map": ["bower_components/jquery/dist/jquery.min.map"]
 
       templates:
         files: [{

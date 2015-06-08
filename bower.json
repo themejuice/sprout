@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "normalize.scss": "~3.0.2",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.3.0",
+    "jquery": "1.11.2"
   }
 }
