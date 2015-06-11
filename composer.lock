@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f13fcc19edb9aac62fb8de9fa8c0d2fd",
+    "hash": "84de96996ba9ec62b0ba8bbc81c09f34",
     "packages": [
         {
             "name": "composer/installers",
@@ -144,32 +144,6 @@
             "time": "2013-03-15 17:51:14"
         },
         {
-            "name": "produceresults/advanced-custom-fields",
-            "version": "5.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://bitbucket.org/produceresults/advanced-custom-fields.git",
-                "reference": "fbc838eafaece28725e6bcb28105531d91426034"
-            },
-            "type": "wordpress-plugin",
-            "description": "Custom fields. Made easy. Use the Advanced Custom Fields plugin to take full control of your edit screens & custom field data.",
-            "homepage": "http://www.advancedcustomfields.com/",
-            "time": "2015-05-11 14:22:37"
-        },
-        {
-            "name": "produceresults/formidable",
-            "version": "2.0.07",
-            "source": {
-                "type": "git",
-                "url": "https://bitbucket.org/produceresults/formidable.git",
-                "reference": "533b7232463fd1289767bff358d1fef56c56a41c"
-            },
-            "type": "wordpress-plugin",
-            "description": "Create Beautiful WordPress Forms – Fast",
-            "homepage": "https://formidablepro.com/",
-            "time": "2015-05-13 13:45:07"
-        },
-        {
             "name": "theme-juice/theme-juice-core",
             "version": "0.3.1",
             "source": {
@@ -210,11 +184,11 @@
         },
         {
             "name": "theme-juice/theme-juice-functions",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-functions.git",
-                "reference": "472b77f1dbd77c36030d58732f87cd243e45dea9"
+                "reference": "d221e438f6cb7f19f9ac46cf6520f280c76d620e"
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -245,7 +219,7 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-05-26 19:38:32"
+            "time": "2015-06-11 15:38:29"
         },
         {
             "name": "theme-juice/theme-juice-shortcodes",
@@ -428,15 +402,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.1.1",
+            "version": "2.2.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.1.1"
+                "reference": "tags/2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -449,36 +423,24 @@
     ],
     "packages-dev": [
         {
-            "name": "manovotny/wptest",
-            "version": "1.5.0",
+            "name": "wpackagist-plugin/dynamic-hostname",
+            "version": "0.4.2",
             "source": {
-                "type": "git",
-                "url": "git@github.com:manovotny/wptest.git",
-                "reference": "841f3fea2991c2e5104de847da2182996962a24f"
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/dynamic-hostname/",
+                "reference": "tags/0.4.2"
             },
-            "type": "library",
-            "license": [
-                "GPL-3.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Michael Novotny",
-                    "email": "manovotny@gmail.com",
-                    "homepage": "http://manovotny.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "WP Test - The Best Tests For WordPress.",
-            "homepage": "http://wptest.io",
-            "keywords": [
-                "data",
-                "export",
-                "import",
-                "tests",
-                "unit tests",
-                "wordpress"
-            ],
-            "time": "2014-09-10 03:08:59"
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/dynamic-hostname.0.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/dynamic-hostname/"
         },
         {
             "name": "x-team/wp-cli-ssh",

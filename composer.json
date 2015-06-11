@@ -48,6 +48,7 @@
     "wpackagist-plugin/wordpress-seo": "*"
   },
   "require-dev": {
+    "wpackagist-plugin/dynamic-hostname": "*",
     "x-team/wp-cli-ssh": "dev-master"
   },
   "extra": {
