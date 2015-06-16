@@ -60,7 +60,12 @@ $theme = new Theme(array(
 ```
 
 #### Theme structure
-We try to follow the [12 factor app](http://12factor.net/) philosophy as closely as makes sense for WordPress. We use a `.env` file to store all environment information, such as database credentials, debug options, salts, etc. These files should _never_ be shared or version controlled. WordPress and plugins are managed via Composer, while front-end assets are managed through Bower. Grunt is used as our build tool of choice.
+We try to follow the [12 factor app](http://12factor.net/) philosophy as closely as makes sense for WordPress.
+* We use a `.env` file to store all environment information, such as database credentials, debug options, salts, etc. These files should _never_ be shared or version controlled. If an `.env` is not desired for production, you may set global `ENV` variables instead. _Never_ hard-code these into the `wp-config.php`
+* All source files are kept inside `src/`, which contains uncompiled Sass, CoffeeScript, Haml, as well as uncompressed images, font files, etc. _Be warned:_ do not place assets straight into the `app/` directory, as they will be permanently removed on the next build cycle. Keep everything inside `src/`, using Grunt to copy over files where necessary
+* WordPress and plugins are managed via Composer
+* Front-end assets are managed through Bower
+* Grunt is used as our build tool of choice
 
 #### Programming languages
 * We use Sass for writing CSS
