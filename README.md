@@ -61,7 +61,7 @@ We try to follow the [12 factor app](http://12factor.net/) as closely as makes s
 #### Programming languages
 * We use Sass for writing CSS
 * We use CoffeeScript for writing JavaScript
-* We use a PHP port for Haml called MtHaml for templating
+* We use a PHP port of Haml called MtHaml for templating
 * Other site-assets, such as custom controllers are written in PHP
 
 ## Deploying to production
