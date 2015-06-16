@@ -1,4 +1,5 @@
 # Trellis
+_This is an internal starter theme for [Produce Results](http://produceresults.com/). You are free to use this theme in any way you like; however, we retain the right to make breaking changes at any time and to deny pull requests if they do not fit within our companies development processes. You are free to fork this repository and modify it as you see fit. If you do go that route, let us know and we can add it into the list of available starter themes for our [command line utility, `tj`]((https://github.com/ezekg/theme-juice-cli))._
 
 ## Requirements
   * [Theme Juice CLI](https://github.com/ezekg/theme-juice-cli)
