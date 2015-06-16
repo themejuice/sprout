@@ -11,13 +11,15 @@
 ## Installation
 After all of the required tools are properly installed and they're executable without `sudo`, run `tj install` to execute the theme installation defined in the `Juicefile`.
 
-## Setting up a new project
+## Getting started
+
+#### Setting up a new project
 Tun `tj new` and follow the prompts.
 
-## Setting up an existing project
+#### Setting up an existing project
 Run `tj setup` and follow the prompts.
 
-## Configuring your `$theme`
+#### Configuring your `$theme`
 Within the `functions.php` file, there is a global `$theme` variable. This is where you will add your theme's assets and configure any packages that you are including. Most packages will accept an empty array (`array()`) to use the default settings defined within the package itself; if you want more control, you can specify which features to load with a boolean. For example, by default, we selectively load only a few shortcodes:
 
 ```php
@@ -53,10 +55,10 @@ $theme = new Theme(array(
 ));
 ```
 
-## Theme structure
+#### Theme structure
 We try to follow the [12 factor app](http://12factor.net/) as closely as makes sense for WordPress. WordPress and plugins are managed via Composer, while front-end assets are managed through Bower. Grunt is used as our build tool of choice.
 
-## Programming languages
+#### Programming languages
 * We use Sass for writing CSS
 * We use CoffeeScript for writing JavaScript
 * We use a PHP port for Haml called MtHaml for templating
