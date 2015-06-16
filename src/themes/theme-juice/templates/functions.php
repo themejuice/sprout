@@ -3,9 +3,19 @@
 use \ThemeJuice\Theme as Theme;
 
 /**
- * Setup theme
+ * Theme configuration
+ *
+ * Package features can be selectively loaded by passing in an array of boolean
+ *  values, corresponding to the features you wish to include. To use the
+ *  default configuration, simply pass in an empty array.
+ *
+ * Assets defined within your theme variable will automatically dequeue any
+ *  asset that is already enqueued with the same name. This can be used to
+ *  your advantage with assets such as jQuery.
+ *
+ * @var {Object} $theme
  */
-$theme = new Theme( array(
+$theme = new Theme(array(
 
   // Packages to load
   "packages" => array(
@@ -20,7 +30,7 @@ $theme = new Theme( array(
   // Assets to enqueue
   "assets" => array(
 
-    // jQuery CDN
+    // jQuery
     "jquery" => array(
       "type" => "script",
       "location" => "assets/scripts/jquery.min.js",
@@ -32,7 +42,7 @@ $theme = new Theme( array(
     "theme-juice-scripts" => array(
       "type" => "script",
       "location" => "assets/scripts/main.min.js",
-      "dependencies" => array( "jquery" ),
+      "dependencies" => array("jquery"),
       "version" => "0.1.0",
       "in_footer" => true,
     ),
@@ -55,3 +65,10 @@ register_nav_menus( array(
   "primary_nav" => __( "Primary Navigation", "theme-juice" ),
   "footer_nav" => __( "Footer Navigation", "theme-juice" ),
 ));
+
+/**
+ * Remove all WP body classes
+ */
+add_filter( "body_class", function() {
+  return array();
+}, 10, 2 );
