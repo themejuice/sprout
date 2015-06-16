@@ -14,10 +14,10 @@ After all of the required tools are properly installed and they're executable wi
 ## Getting started
 
 #### Setting up a new project
-Tun `tj new` and follow the prompts.
+If you're starting a new project, run `tj new` and follow the prompts.
 
 #### Setting up an existing project
-Run `tj setup` and follow the prompts.
+If you're working on an existing project, run `tj setup` and follow the prompts.
 
 #### Configuring your `$theme`
 Within the `functions.php` file, there is a global `$theme` variable. This is where you will add your theme's assets and configure any packages that you are including. Most packages will accept an empty array (`array()`) to use the default settings defined within the package itself; if you want more control, you can specify which features to load with a boolean. For example, by default, we selectively load only a few shortcodes:
