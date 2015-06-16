@@ -1,6 +1,6 @@
 - /* Template Name: Blog */
 
-- include "partials/header.php"
+- tj_include_partial("partials/header")
 
 .content__wrapper
   .content
@@ -22,9 +22,9 @@
 
           .blog-page__post__content
             %a(href="#{the_permalink()}")
-              %h2 = tj_title()
-            %p = the_time("F j, Y")
-            %p = tj_excerpt()
+              %h2= the_title()
+            %p= the_time("F j, Y")
+            %p= tj_excerpt()
             %a.button(href="#{the_permalink()}")
               Read More
           %hr
@@ -40,6 +40,6 @@
 
   // content
 
-  - include "partials/sidebar.php"
+  - tj_include_partial("partials/sidebar")
 
-- include "partials/footer.php"
+- tj_include_partial("partials/footer")

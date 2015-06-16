@@ -1,6 +1,6 @@
 -/* Template Name: Page */
 
-- include "partials/header.php"
+- tj_include_partial("partials/header")
 
 .content__wrapper
   .content
@@ -10,7 +10,7 @@
       - if ( has_post_thumbnail() )
         %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
 
-      %h1 = tj_title()
+      %h1= tj_title()
 
       - the_content()
     - else
@@ -18,6 +18,6 @@
 
   // content
 
-  - include "partials/sidebar.php"
+  - tj_include_partial("partials/sidebar")
 
-- include "partials/footer.php"
+- tj_include_partial("partials/footer")
