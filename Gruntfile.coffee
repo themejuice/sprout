@@ -58,7 +58,6 @@ module.exports = (grunt) ->
     concat:
       options:
         banner: "<%= banner %>"
-
       dist:
         src: [
           "src/themes/theme-juice/scripts/vendor/*.js"
