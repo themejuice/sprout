@@ -62,9 +62,6 @@ module.exports = (grunt) ->
       dist:
         src: [
           "src/themes/theme-juice/scripts/vendor/*.js"
-          "src/themes/theme-juice/scripts/Parallax.js"
-          "src/themes/theme-juice/scripts/Tooltip.js"
-          "src/themes/theme-juice/scripts/Product.js"
           "src/themes/theme-juice/scripts/app.js"
         ]
         dest: "app/themes/theme-juice/assets/scripts/main.js"
