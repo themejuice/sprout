@@ -5,18 +5,10 @@
   RewriteEngine On
   RewriteBase /
 
-  # Redirect forbidden files to index
-  ErrorDocument 403 /index.php
-
-  # Multisite specific stuffs
   RewriteRule ^index\.php$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.php [L]
-
-  # Fix infinite loops
-  RewriteCond %{ENV:REDIRECT_STATUS} 200
-  RewriteRule .* - [L]
 </IfModule>
 # END WordPress
 
