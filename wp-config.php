@@ -27,20 +27,29 @@ $environment = function() {
  * Use Dotenv to set stage. Fall back to non-suffixed .env if a
  *  named stage was not found.
  */
-if ( $stage = $environment() ) {
-  Dotenv::load( __DIR__, ".env.$stage" );
-} else {
-  Dotenv::load( __DIR__ );
+try {
+  if ( $stage = $environment() ) {
+    Dotenv::load( __DIR__, ".env.$stage" );
+  } else {
+    Dotenv::load( __DIR__ );
+  }
+} catch (Exception $e) {
+  // Continue to see if required ENV variables are set another way...
 }
 
-Dotenv::required(array(
-  "DB_NAME",
-  "DB_USER",
-  "DB_PASSWORD",
-  "DB_HOST",
-  "WP_HOME",
-  "WP_SITEURL"
-));
+try {
+  Dotenv::required(array(
+    "DB_NAME",
+    "DB_USER",
+    "DB_PASSWORD",
+    "DB_HOST",
+    "WP_HOME",
+    "WP_SITEURL"
+  ));
+} catch (Exception $e) {
+  echo $e->getMessage();
+  die;
+}
 
 /**
  * Stage
