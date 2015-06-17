@@ -1,6 +1,7 @@
 commands:
   install:
     - composer install
+    - bundle install
     - npm install
     - bower install
     - grunt build
