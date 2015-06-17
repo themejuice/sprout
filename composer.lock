@@ -184,7 +184,7 @@
         },
         {
             "name": "theme-juice/theme-juice-functions",
-            "version": "0.2.1",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-functions.git",
@@ -322,15 +322,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.0.8",
+            "version": "1.1.0",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.0.8"
+                "reference": "tags/1.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.0.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
