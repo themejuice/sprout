@@ -146,13 +146,8 @@ module.exports = (grunt) ->
         files: [{
           expand: yes
           cwd: "src/themes/theme-juice/images"
-          src: ["**/*.{png,jpg,gif}"]
+          src: ["**/*.{png,jpg,gif,svg}"]
           dest: "app/themes/theme-juice/assets/images/"
-        }, {
-          expand: yes
-          cwd: "src/themes/theme-juice/svg"
-          src: ["**/*.svg"]
-          dest: "app/themes/theme-juice/assets/svg/"
         }]
 
     uglify:
@@ -218,7 +213,7 @@ module.exports = (grunt) ->
           "src/themes/theme-juice/images/**/*.jpg"
           "src/themes/theme-juice/images/**/*.png"
           "src/themes/theme-juice/images/**/*.gif"
-          "src/themes/theme-juice/svg/**/*.svg"
+          "src/themes/theme-juice/images/**/*.svg"
         ]
         tasks: ["newer:imagemin"]
         options:
