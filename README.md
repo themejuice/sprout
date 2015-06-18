@@ -22,6 +22,18 @@ If you're starting a new project, run `tj new` and follow the prompts.
 #### Setting up an existing project
 If you're working on an existing project, run `tj setup` and follow the prompts.
 
+#### Building a project
+To build a project (compile assets, install dependencies, etc.), run `tj install`.
+
+#### Watching and compiling assets
+To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
+
+#### Install dependencies
+To install and update Composer dependencies, run `tj vendor install` or `tj vendor update`. See Composer documentation for additional commands.
+
+#### Managing WordPress
+To manage a project's WordPress installation with WP-CLI, run `tj wp <command>` e.g. `tj wp db export`, `tj wp search-replace project.com project.dev`. See WP-CLI documentation for additional commands.
+
 #### Configuring your `$theme`
 Within the `functions.php` file, there is a global `$theme` variable. This is where you will add your theme's assets and configure any packages that you are including. Most packages will accept an empty array (`array()`) to use the default settings defined within the package itself; if you want more control, you can specify which features to load with a boolean. For example, by default, we selectively load only a few shortcodes:
 
