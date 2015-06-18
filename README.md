@@ -23,7 +23,7 @@ If you're starting a new project, run `tj new` and follow the prompts.
 If you're working on an existing project, run `tj setup` and follow the prompts.
 
 #### Building a project
-To build a project (compile assets, install dependencies, etc.), run `tj install`.
+To build a project (compile assets, install dependencies, etc.), run `tj build`.
 
 #### Watching and compiling assets
 To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
