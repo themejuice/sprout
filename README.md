@@ -28,7 +28,7 @@ To build a project (compile assets, install dependencies, etc.), run `tj build`.
 #### Watching and compiling assets
 To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
 
-#### Install dependencies
+#### Installing dependencies
 To install and update Composer dependencies, run `tj vendor install` or `tj vendor update`. See Composer documentation for additional commands.
 
 #### Managing WordPress
@@ -74,7 +74,7 @@ $theme = new Theme(array(
 // ...
 ```
 
-#### Theme structure
+#### App structure
 We try to follow the [12 factor app](http://12factor.net/) philosophy as closely as makes sense for WordPress.
 * We use a `.env` file to store all environment information, such as database credentials, debug options, salts, etc. These files should _never_ be shared or version controlled. If an `.env` is not desired for production, you may set global `ENV` variables instead. _Never_ hard-code these into the `wp-config.php` file, as it will be overwritten on the next deployment
 * All source files are kept inside `src/`, which contains uncompiled Sass, CoffeeScript, Haml, as well as uncompressed images, font files, etc. _Be warned:_ do not place assets straight into the `app/` directory, as they will be permanently removed on the next build cycle. Keep everything inside `src/`, using Grunt to copy over files where necessary
