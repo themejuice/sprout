@@ -93,7 +93,7 @@ When deploying to production, ensure that you do _not_ deploy the `robots.txt` f
 
 
 ## Roadmap
-In the long run, I'd like Theme Juice to be a solid foundation that developers can use to create quality WordPress applications. Currently, it is not meant for simple theme development, but for entire WP application development.
+In the long run, I'd like Theme Juice to be a solid foundation that developers can use to create quality WordPress applications. Currently, it is not meant for simple theme development, but for entire WP application development. Features that I'd like to work toward:
 
 - [x] Create Core package to render initial HTML and handle automatic inclusion of assets/packages
 - [x] Create packages that can be updated independently per-project
