@@ -93,15 +93,16 @@ When deploying to production, ensure that you do _not_ deploy the `robots.txt` f
 
 
 ## Roadmap
-In the long run, I'd like Theme Juice to be a solid foundation that developers can use to create quality WordPress applications. Currently, it is not meant for simple theme development, but for entire WP application development. To make sure that the system is extensible, semantically versioned and so able to be independently updated per-project.
+In the long run, I'd like Theme Juice to be a solid foundation that developers can use to create quality WordPress applications. Currently, it is not meant for simple theme development, but for entire WP application development.
 
-- [x] Create Core package to render initial HTML and handle automatic inclusion of assets/packages.
-- [x] Create packages that can be updated independently per-project.
-- [x] Ability to conditionally include only needed assets from a package.
+- [x] Create Core package to render initial HTML and handle automatic inclusion of assets/packages
+- [x] Create packages that can be updated independently per-project
+- [x] Ability to conditionally include only needed assets from a package
 - [x] Create Functions package containing helper functions
 - [x] Create Shortcodes package containing common shortcodes (current shortcodes need to be filtered through and rewritten)
 - [ ] Create Customizer package containing common theme-options e.g. social links, phone number, address
-- [ ] Eventually create additional Customizer options such as color palette, font choice, etc.
+- [ ] Eventually create additional Customizer options such as color palette, font choice, etc. using exported Sass maps in `assets/json`
+- [x] Ensure that the system is extensible, semantically versioned and so able to be independently updated per-project
 
 ----
 
