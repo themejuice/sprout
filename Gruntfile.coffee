@@ -11,11 +11,16 @@ module.exports = (grunt) ->
     banner: "/*! <%= pkg.name %> - v<%= pkg.version %>\n" + "<%= pkg.homepage ? \"* \" + pkg.homepage + \"\\n\" : \"\" %>" + "* Copyright (c) <%= grunt.template.today(\"yyyy\") %> <%= pkg.author.name %> <<%= pkg.author.homepage %>>" + " */\n\n"
 
     autoprefixer:
-      options: [
-        "ie >= 8"
-        "Firefox >= 4"
-        "iOS >= 6"
-      ]
+      options:
+        browsers: [
+          '> 1%'
+          'Chrome > 0'
+          'Explorer >= 8'
+          'Firefox >= 4'
+          'iOS >= 6'
+          'Opera >= 12'
+          'Safari > 0'
+        ]
       dist:
         files:
           "app/themes/theme-juice/assets/css/main.css": ["app/themes/theme-juice/assets/css/main.css"]
