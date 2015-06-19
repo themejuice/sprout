@@ -28,7 +28,10 @@ To build a project (compile assets, install dependencies, etc.), run `tj build`.
 #### Watching and compiling assets
 To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
 
-#### Installing dependencies
+#### Installing front-end dependencies
+To install and update Bower dependencies, run `tj assets install`. See Bower documentation for additional commands.
+
+#### Installing back-end dependencies
 To install and update Composer dependencies, run `tj vendor install` or `tj vendor update`. See Composer documentation for additional commands.
 
 #### Managing WordPress
