@@ -3,25 +3,25 @@
  */
 $flint: (
   "breakpoints": (
-    "desktop": (
+    "giant": (
       "columns": 16,
       "breakpoint": 90em
     ),
-    "laptop": (
+    "large": (
       "columns": 12,
       "breakpoint": 75em
     ),
-    "tablet": (
+    "medium": (
       "columns": 8,
       "breakpoint": 60em
     ),
-    "mobile": (
+    "small": (
       "columns": 4,
       "breakpoint": 40em
     )
   ),
   "settings": (
-    "default": "mobile",
+    "default": "small",
     "grid": "fluid",
     "gutter": 1em,
     "float-direction": "left",
