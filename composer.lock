@@ -145,11 +145,11 @@
         },
         {
             "name": "theme-juice/theme-juice-core",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-core.git",
-                "reference": "2de812fb1466bb3e20a10bb25705ee79cf565b1e"
+                "reference": "9f0f71f19427f73220cd4d468279ff81211c1ce0"
             },
             "require": {
                 "php": ">=5.3.0"
@@ -180,7 +180,7 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-05-26 21:58:38"
+            "time": "2015-06-24 19:08:32"
         },
         {
             "name": "theme-juice/theme-juice-functions",
@@ -322,15 +322,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.1.0"
+                "reference": "tags/1.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.1.zip",
                 "reference": null,
                 "shasum": null
             },
