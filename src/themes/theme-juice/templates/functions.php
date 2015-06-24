@@ -1,6 +1,6 @@
 <?php
 
-use \ThemeJuice\Theme as Theme;
+use \ThemeJuice\Theme;
 
 /**
  * Theme configuration
