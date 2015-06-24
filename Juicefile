@@ -1,6 +1,6 @@
 #
 # Manage command aliases for the current application
-# 
+#
 commands:
 
   # Run application install scripts
@@ -11,7 +11,7 @@ commands:
     - bower install
     - grunt build
 
-  # Application build tools
+  # Manage build tools
   watch:
     - grunt %args%
 
