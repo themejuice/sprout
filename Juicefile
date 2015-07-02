@@ -35,3 +35,101 @@ commands:
   # Package up entire application into a gzipped tar file
   dist:
     - tar -zcvf dist.tar.gz .
+
+#
+# Manage deployment for the current application
+#
+deployment:
+
+  # Application settings
+  application:
+    name: example-app
+
+  # Repository settings
+  repository:
+    repo_url: git@github.com:ezekg/theme-juice-starter.git
+    branch: :master
+    scm: :rsync
+
+  # Other settings that will be passed directly to Capistrano
+  # @see http://capistranorb.com/
+  settings:
+    keep_releases: 5
+    format: :pretty
+    log_level: :verbose
+    use_sudo: false
+    ssh_options:
+      keys: ~/.ssh/id_rsa
+      forward_agent: true
+      paranoid: true
+
+  # Capistrano rsync options and install procedure
+  # @see https://github.com/Bladrak/capistrano-rsync
+  rsync:
+    stage: tmp/deploy
+    cache: shared/deploy
+    scm: :git
+    depth: 1
+    options:
+      - --recursive
+      - --delete
+      - --delete-excluded
+      - --exclude="src/"
+      - --exclude=".editorconfig"
+      - --exclude=".env.sample"
+      - --exclude=".git*"
+      - --exclude="Gemfile*"
+      - --exclude="Gruntfile*"
+      - --exclude="Juicefile*"
+      - --exclude="composer.*"
+      - --exclude="package.json"
+      - --exclude="bower.json"
+      - --exclude="README.*"
+    install:
+      - composer install --no-dev
+      - bundle install
+      - npm install
+      - bower install
+      - grunt build
+
+  # Slack integration
+  # @see https://github.com/onthebeach/capistrano-slackify
+  slack:
+    url: https://hooks.slack.com/services/your-token
+    subdomain: example
+    user: deploybot
+    channel: "#devops"
+    emoji: ":rocket:"
+
+  # Deployment stages
+  stages:
+    # staging:
+    #   server: 192.168.50.4
+    #   path: /srv/www/tj-example
+    #   user: vagrant
+    #   url: example.dev
+    #   uploads: app/uploads
+    #   tmp: tmp
+    #   shared:
+    #     - .htaccess
+    #     - .env.staging
+    #   ignore:
+    #     - robots.txt
+    #   roles:
+    #     - :web
+    #     - :app
+    #     - :db
+
+    # This is your development environment used to push/pull database files,
+    #  uploads, the .env file, etc.
+    vagrant:
+      server: themejuice.dev
+      path: /srv/www/tj-themejuice
+      user: vagrant
+      pass: vagrant
+      url: themejuice.dev
+      uploads: app/uploads
+      backup: backup
+      tmp: tmp
+      roles:
+        - :dev
