@@ -21,6 +21,7 @@
 # Deployment
 #
 .capistrano/
+tmp/
 
 #
 # Database

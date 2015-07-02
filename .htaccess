@@ -13,12 +13,20 @@
 # END WordPress
 
 #
-# Block access to all files starting with a dot
+# Block all access to files beginning with a '.'
 #
 <FilesMatch "^\.">
   Order allow,deny
   Deny from all
 </FilesMatch>
+
+#
+# Block all access from directories beginning with a '.'
+#
+<DirectoryMatch "^\.|\/\.">
+  Order allow,deny
+  Deny from all
+</DirectoryMatch>
 
 #
 # Send the CORS header for images when browsers request it.
