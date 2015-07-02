@@ -1,7 +1,9 @@
 {
   "name": "Trellis",
   "description": "Theme designed and developed by Produce Results",
+  "repository": "https://github.com/ezekg/theme-juice-starter",
   "homepage": "http://themejuice.it",
+  "license": "MIT",
   "version": "0.1.0",
   "author": {
     "name": "Produce Results",
