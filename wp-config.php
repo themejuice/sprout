@@ -15,7 +15,7 @@ $environment = function() {
   );
 
   foreach ( $stages as $stage ) {
-    if ( file_exists( __DIR__ . "/.env.$stage" ) ) {
+    if ( file_exists( __DIR__ . "/.env.{$stage}" ) ) {
       return $stage;
     }
   }
@@ -29,7 +29,7 @@ $environment = function() {
  */
 try {
   if ( $stage = $environment() ) {
-    Dotenv::load( __DIR__, ".env.$stage" );
+    Dotenv::load( __DIR__, ".env.{$stage}" );
   } else {
     Dotenv::load( __DIR__ );
   }
