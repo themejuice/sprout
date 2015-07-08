@@ -5,6 +5,12 @@
   RewriteEngine On
   RewriteBase /
 
+  # Never deliver hidden files or directories (starting with a '.')
+  #
+  # Redirects to a 404 to ensure that no clues are given as to if the
+  #  file actually exists on the server
+  RewriteRule ^(.*/)?\.+ - [R=404,L]
+
   RewriteRule ^index\.php$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -12,21 +18,9 @@
 </IfModule>
 # END WordPress
 
-#
-# Block all access to files beginning with a '.'
-#
-<FilesMatch "^\.">
-  Order allow,deny
-  Deny from all
-</FilesMatch>
-
-#
-# Block all access from directories beginning with a '.'
-#
-<DirectoryMatch "^\.|\/\.">
-  Order allow,deny
-  Deny from all
-</DirectoryMatch>
+# Second line of defense for hidden files/directories if 'mod_rewrite'
+#  happens to not be enabled
+RedirectMatch 404 ^(.*/)?\.+
 
 #
 # Send the CORS header for images when browsers request it.
