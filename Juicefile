@@ -74,18 +74,18 @@ deployment:
       - --recursive
       - --delete
       - --delete-excluded
-      - --exclude="src/"
-      - --exclude=".sass-cache/"
-      - --exclude=".editorconfig"
-      - --exclude=".env.sample"
-      - --exclude=".git*"
-      - --exclude="Gemfile*"
-      - --exclude="Gruntfile*"
-      - --exclude="Juicefile*"
-      - --exclude="composer.*"
-      - --exclude="package.json"
-      - --exclude="bower.json"
-      - --exclude="README.*"
+      - --exclude="/src/"
+      - --exclude="/.sass-cache/"
+      - --exclude="/.editorconfig"
+      - --exclude="/.env.sample"
+      - --exclude="/.git*"
+      - --exclude="/Gemfile*"
+      - --exclude="/Gruntfile*"
+      - --exclude="/Juicefile*"
+      - --exclude="/composer.*"
+      - --exclude="/package.json"
+      - --exclude="/bower.json"
+      - --exclude="/README.*"
     install:
       - composer install --no-dev
       - bundle install
