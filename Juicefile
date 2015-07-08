@@ -75,6 +75,7 @@ deployment:
       - --delete
       - --delete-excluded
       - --exclude="src/"
+      - --exclude=".sass-cache/"
       - --exclude=".editorconfig"
       - --exclude=".env.sample"
       - --exclude=".git*"
