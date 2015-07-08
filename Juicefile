@@ -103,18 +103,31 @@ deployment:
 
   # Deployment stages
   stages:
-    # staging:
+    # production:
     #   server: 192.168.50.4
-    #   path: /srv/www/tj-example
-    #   user: vagrant
-    #   url: example.dev
+    #   path: /var/www/production
+    #   user: deploy
+    #   url: example.com
     #   uploads: app/uploads
     #   tmp: tmp
     #   shared:
-    #     - .htaccess
-    #     - .env.staging
+    #     - .env.production
     #   ignore:
     #     - robots.txt
+    #   roles:
+    #     - :web
+    #     - :app
+    #     - :db
+
+    # staging:
+    #   server: 192.168.50.4
+    #   path: /var/www/staging
+    #   user: deploy
+    #   url: staging.example.com
+    #   uploads: app/uploads
+    #   tmp: tmp
+    #   shared:
+    #     - .env.staging
     #   roles:
     #     - :web
     #     - :app
