@@ -76,6 +76,8 @@ deployment:
       - --delete-excluded
       - --include="vendor/**/*" # Overrides any excluded patterns
       - --exclude="src/"
+      - --exclude="bower_components/"
+      - --exclude="node_modules/"
       - --exclude=".sass-cache/"
       - --exclude=".editorconfig"
       - --exclude=".env.sample"
