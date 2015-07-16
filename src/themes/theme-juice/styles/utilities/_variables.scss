@@ -7,8 +7,20 @@ $image-url: "/app/themes/theme-juice/assets/images";
  * Font stacks
  */
 $fonts: (
-  "open sans": ("open-sans", "Helvetica Neue", "helvetica", "arial", sans-serif),
-  "georgia": ("Georgia", "Times", "Times New Roman", serif)
+  "open sans": (
+    "open-sans",
+    "Open Sans",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    sans-serif,
+  ),
+  "georgia": (
+    "Georgia",
+    "Times New Roman",
+    "Times",
+    serif,
+  ),
 );
 
 /**
@@ -27,5 +39,5 @@ $colors: (
  * Z-index
  */
 $z-index: (
-  "goku": 9001
+  "goku": 9001,
 );

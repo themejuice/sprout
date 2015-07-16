@@ -1,5 +1,5 @@
 {
-  "name": "Trellis",
+  "name": "trellis",
   "private": true,
   "dependencies": {
     "normalize.scss": "~3.0.2",
