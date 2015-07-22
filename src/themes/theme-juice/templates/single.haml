@@ -6,8 +6,11 @@
       - if ( have_posts() )
         - the_post()
 
+        - if ( has_post_thumbnail() )
+          %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
+
         %h1
-          %a(href="#{the_permalink()}")= the_title()
+          %a(href="#{the_permalink()}")= tj_title()
 
         %aside.meta
           %span.meta__date= the_time("F j, Y")
