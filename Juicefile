@@ -140,11 +140,11 @@ deployment:
     # This is your development environment used to push/pull database files,
     #  uploads, the .env file, etc.
     vagrant:
-      server: themejuice.dev
-      path: /srv/www/tj-themejuice
+      server: example.dev
+      path: /srv/www/tj-example
       user: vagrant
       pass: vagrant
-      url: themejuice.dev
+      url: example.dev
       uploads: app/uploads
       backup: backup
       tmp: tmp
