@@ -2,7 +2,14 @@
  * Sidebar
  */
 .sidebar
-  +_(4, $gutter: row)
+  +_(4 4 8 4, $gutter: omega)
+  +box-shadow(1px 1px 3px palette("gray", $opacity: 0.5))
+  +border-radius(4px)
 
   &__section
     +_(4, auto)
+    margin:
+      top: 1rem
+
+    h2
+      margin: 0

@@ -1,0 +1,41 @@
+/**
+ * Column shortcode
+ *
+ * @NOTE For most use cases, all columns should be placed within a [row]
+ */
+$cols: ("one-fourth": 1/4, "half": 1/2, "three-fourths": 3/4, "one-third": 1/3, "two-thirds": 2/3, "full": 1, "row": 1)
+
+.column__span
+  $parent: &
+  $out: ()
+
+  @each $col, $width in $cols
+    &--#{$col}
+      +_($width $width $width 1, 1, $gutter: row)
+
+      @if $col != "row"
+        padding:
+          right: 1rem
+
+      // Calculate when we need to clear the floats (when sum is 1 full col)
+      @each $c, $w in $cols
+        $selectors: (&)
+        $sum: $width
+        $nth: 1
+
+        @while $sum < 1
+          $selectors: append($selectors, "+ #{$parent}--#{$c}", space)
+          $sum: $sum + $w
+          $nth: $nth + 1
+
+        @if not index($out, $selectors)
+          $out: append($out, $selectors, comma)
+
+          @if $col == "full" or $col == "row"
+            clear: both
+          @else if $col == $c
+            @at-root &:first-child ~ #{$parent}--#{$c}:nth-child(#{$nth}n+1)
+              clear: left
+          @else
+            @at-root & + #{$selectors}
+              clear: left

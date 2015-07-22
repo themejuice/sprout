@@ -2,13 +2,13 @@
 
 - tj_include_partial("partials/header")
 
-.content__wrapper
-
-  .content
+%section.content__wrapper
+  %main.content
     %h1 We have lift off!
     %p= tj_lipsum()
-  // content
 
   - tj_include_partial("partials/sidebar")
+
+// content
 
 - tj_include_partial("partials/footer")

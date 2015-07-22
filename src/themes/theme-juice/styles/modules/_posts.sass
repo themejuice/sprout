@@ -1,0 +1,18 @@
+/**
+ * Posts
+ */
+.posts
+  +_(12 8 8 4, $gutter: row)
+  +box-shadow(1px 1px 3px palette("gray", $opacity: 0.5))
+  +border-radius(4px)
+
+.posts__post
+  +_(12 8 8 4, auto)
+  margin:
+    top: 1rem
+    bottom: 1rem
+
+  &__content
+
+    h2
+      margin: 0

@@ -1,18 +1,21 @@
 - tj_include_partial("partials/header")
 
-.content__wrapper
-  .content
-    - if ( have_posts() )
-      - the_post()
+%section.main__wrapper
+  %main.main.main--single
+    .content
+      - if ( have_posts() )
+        - the_post()
 
-      %h1= the_title()
-      %p= the_time("F j, Y")
-      - the_content()
-    - else
-      %h4 Sorry, the page could not be displayed.
+        %h1
+          %a(href="#{the_permalink()}")= the_title()
 
-  // content
+        %aside.meta
+          %span.meta__date= the_time("F j, Y")
 
-  - tj_include_partial("partials/sidebar")
+        = the_content()
+
+    - tj_include_partial("partials/sidebar")
+
+// content
 
 - tj_include_partial("partials/footer")

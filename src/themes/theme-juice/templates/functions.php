@@ -24,6 +24,8 @@ $theme = new Theme(array(
       "button" => true,
       "colors" => true,
       "fonts" => true,
+      "col" => true,
+      "row" => true,
     ),
   ),
 
@@ -61,14 +63,48 @@ $theme = new Theme(array(
  *
  * @link http://codex.wordpress.org/Function_Reference/register_nav_menus
  */
-register_nav_menus( array(
+register_nav_menus(array(
   "primary_nav" => __( "Primary Navigation", "theme-juice" ),
   "footer_nav" => __( "Footer Navigation", "theme-juice" ),
 ));
 
 /**
  * Remove all WP body classes
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/body_class
  */
 add_filter( "body_class", function() {
-  return array();
+  $classes = array();
+
+  if ( is_home() || is_front_page() ) {
+    $classes[] = "home";
+  } elseif ( is_page("blog") || is_archive() ) {
+    $classes[] = "blog";
+  } elseif ( is_single() ) {
+    $classes[] = "post";
+  } else {
+    $classes[] = "page";
+  }
+
+  return $classes;
 }, 10, 2 );
+
+/**
+ * Add IE conditional tags to HTML
+ *
+ * @param {Arr} $buffer (current buffer)
+ *
+ * @return {Arr}
+ */
+add_filter( "tj_before_render_html", function( $buffer ) {
+  $buffer[] = "<!--[if lt IE 8]>\n";
+  $buffer[] = "<html class='no-js lt-ie8' lang='en'>\n";
+  $buffer[] = "<![endif]-->\n";
+  $buffer[] = "<!--[if IE 8]>\n";
+  $buffer[] = "<html class='no-js ie8 lt-ie9' lang='en'>\n";
+  $buffer[] = "<![endif]-->\n";
+  $buffer[] = "<!--[if IE 9]>\n";
+  $buffer[] = "<html class='no-js ie9 lt-ie10' lang='en'>\n";
+  $buffer[] = "<![endif]-->\n";
+  return $buffer;
+});

@@ -1,0 +1,28 @@
+/**
+ * Pagination
+ */
+.pagination
+  +_(16 12 8 4)
+  text:
+    align: center
+
+  &__wrapper
+    +_(container, clear)
+
+  &__prev,
+  &__next
+    +inline-block
+
+  &__prev
+    margin:
+      right: 1em
+
+  &__next
+    margin:
+      left: 1em
+
+  &__pages
+    +inline-block
+
+    &__page
+      display: inherit

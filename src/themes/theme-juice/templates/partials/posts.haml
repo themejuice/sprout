@@ -1,0 +1,24 @@
+.posts
+  - while ( $posts->have_posts() )
+    - $posts->the_post()
+
+    %article.posts__post
+
+      - if ( has_post_thumbnail() )
+        .posts__post__thumb
+          %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
+
+      .posts__post__content
+        %h2
+          %a(href="#{the_permalink()}")= the_title()
+
+        %aside.meta
+          %span.meta__date= the_time("F j, Y")
+
+        %p= tj_excerpt()
+        %a.button(href="#{the_permalink()}")
+          Read More
+
+    // post
+
+// posts

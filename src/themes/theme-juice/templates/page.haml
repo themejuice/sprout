@@ -2,22 +2,22 @@
 
 - tj_include_partial("partials/header")
 
-.content__wrapper
-  .content
-    - if ( have_posts() )
-      - the_post()
+%section.main__wrapper
+  %main.main
+    .content
+      - if ( have_posts() )
+        - the_post()
 
-      - if ( has_post_thumbnail() )
-        %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
+        - if ( has_post_thumbnail() )
+          %img(src="#{tj_featured_image()}" alt="#{tj_title()}")
 
-      %h1= tj_title()
+        %h1
+          %a(href="#{the_permalink()}")= the_title()
 
-      - the_content()
-    - else
-      %h4 Sorry, the page could not be displayed.
+        = the_content()
 
-  // content
+    - tj_include_partial("partials/sidebar")
 
-  - tj_include_partial("partials/sidebar")
+// content
 
 - tj_include_partial("partials/footer")
