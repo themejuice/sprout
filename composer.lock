@@ -223,11 +223,11 @@
         },
         {
             "name": "theme-juice/theme-juice-shortcodes",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezekg/theme-juice-shortcodes.git",
-                "reference": "08c6871752164432be8053f2bad199dd6a6dff73"
+                "reference": "381a66ae42021d07c6e327d6956f8bbfad407021"
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -258,7 +258,7 @@
                 "sass",
                 "theme"
             ],
-            "time": "2015-05-26 19:56:48"
+            "time": "2015-07-21 19:05:36"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -342,15 +342,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.4.2",
+            "version": "5.4.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.4.2"
+                "reference": "tags/5.4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -402,15 +402,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.2.1",
+            "version": "2.3",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.2.1"
+                "reference": "tags/2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.zip",
                 "reference": null,
                 "shasum": null
             },
