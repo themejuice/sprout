@@ -30,7 +30,7 @@ commands:
   # Create a backup of the current database with a nice timestamp
   backup:
     - mkdir -p backup
-    - wp ssh --host=vagrant db export backup/$(date +'%Y-%m-%d-%H-%M-%S').sql
+    - wp ssh --host=vagrant db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
 
   # Package up entire application into a gzipped tar file
   dist:
