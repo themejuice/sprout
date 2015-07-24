@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "84de96996ba9ec62b0ba8bbc81c09f34",
+    "hash": "7a70c3f59e84953c0b23974d053e9edd",
     "packages": [
         {
             "name": "composer/installers",
@@ -148,8 +148,14 @@
             "version": "0.3.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:ezekg/theme-juice-core.git",
+                "url": "https://github.com/ezekg/theme-juice-core.git",
                 "reference": "6648e4f21bdbf1a933727ade6d40768ea5c530a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezekg/theme-juice-core/zipball/6648e4f21bdbf1a933727ade6d40768ea5c530a0",
+                "reference": "6648e4f21bdbf1a933727ade6d40768ea5c530a0",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
@@ -160,6 +166,7 @@
                     "ThemeJuice\\": "ThemeJuice/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -172,13 +179,13 @@
             "description": "Core files for Theme Juice framework",
             "homepage": "https://github.com/theme-juice/theme-juice-core",
             "keywords": [
-                "WordPress",
+                "HAML",
                 "coffeescript",
                 "framework",
-                "haml",
                 "mthaml",
                 "sass",
-                "theme"
+                "theme",
+                "wordpress"
             ],
             "time": "2015-06-24 19:22:52"
         },
@@ -187,8 +194,14 @@
             "version": "0.2.3",
             "source": {
                 "type": "git",
-                "url": "git@github.com:ezekg/theme-juice-functions.git",
+                "url": "https://github.com/ezekg/theme-juice-functions.git",
                 "reference": "3dccef3a21d98ecd07568eee636e74ec69d418c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezekg/theme-juice-functions/zipball/3dccef3a21d98ecd07568eee636e74ec69d418c7",
+                "reference": "3dccef3a21d98ecd07568eee636e74ec69d418c7",
+                "shasum": ""
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -199,6 +212,7 @@
                     "ThemeJuice\\": "ThemeJuice/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -211,13 +225,13 @@
             "description": "Functions for Theme Juice framework",
             "homepage": "https://github.com/theme-juice/theme-juice-functions",
             "keywords": [
-                "WordPress",
+                "HAML",
                 "coffeescript",
                 "framework",
-                "haml",
                 "mthaml",
                 "sass",
-                "theme"
+                "theme",
+                "wordpress"
             ],
             "time": "2015-07-08 17:33:59"
         },
@@ -226,8 +240,14 @@
             "version": "0.2.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:ezekg/theme-juice-shortcodes.git",
+                "url": "https://github.com/ezekg/theme-juice-shortcodes.git",
                 "reference": "381a66ae42021d07c6e327d6956f8bbfad407021"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ezekg/theme-juice-shortcodes/zipball/381a66ae42021d07c6e327d6956f8bbfad407021",
+                "reference": "381a66ae42021d07c6e327d6956f8bbfad407021",
+                "shasum": ""
             },
             "require": {
                 "theme-juice/theme-juice-core": "*"
@@ -238,6 +258,7 @@
                     "ThemeJuice\\": "ThemeJuice/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -250,13 +271,13 @@
             "description": "Shortcodes for Theme Juice framework",
             "homepage": "https://github.com/theme-juice/theme-juice-shortcodes",
             "keywords": [
-                "WordPress",
+                "HAML",
                 "coffeescript",
                 "framework",
-                "haml",
                 "mthaml",
                 "sass",
-                "theme"
+                "theme",
+                "wordpress"
             ],
             "time": "2015-07-21 19:05:36"
         },
@@ -370,7 +391,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -390,7 +411,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -402,15 +423,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.3",
+            "version": "2.3.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.3"
+                "reference": "tags/2.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.2.zip",
                 "reference": null,
                 "shasum": null
             },

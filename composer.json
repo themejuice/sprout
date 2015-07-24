@@ -16,18 +16,6 @@
       }
     },
     {
-      "type": "git",
-      "url": "git@github.com:ezekg/theme-juice-core.git"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:ezekg/theme-juice-functions.git"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:ezekg/theme-juice-shortcodes.git"
-    },
-    {
       "type": "composer",
       "url": "http://wpackagist.org"
     }
