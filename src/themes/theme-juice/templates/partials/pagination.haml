@@ -1,10 +1,10 @@
 %nav.pagination__wrapper(role="complementary")
   .pagination
-    - $pagination_pages = paginate_links( array( "current" => max( 1, $query_var ),
+    - $pagination_pages = paginate_links(array("current" => max(1, $query_var),
         "prev_text" => "<i class='fa fa-chevron-left'></i>",
     	  "next_text" => "<i class='fa fa-chevron-right'></i>",
         "total" => $posts->max_num_pages,
-        "type" => "array" ) )
+        "type" => "array"))
 
     -# Sometimes paginate_links() returns a string, so we're suppressing the
     -#  error that might happen here instead of doing a check
