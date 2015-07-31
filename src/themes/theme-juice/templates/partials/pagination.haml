@@ -1,8 +1,8 @@
 %nav.pagination__wrapper(role="complementary")
   .pagination
     - $pagination_pages = paginate_links(array("current" => max(1, $query_var),
-        "prev_text" => "<i class='fa fa-chevron-left'></i>",
-        "next_text" => "<i class='fa fa-chevron-right'></i>",
+        "next_text" => "<i class='fa fa-chevron-right' rel='next'></i>",
+        "prev_text" => "<i class='fa fa-chevron-left' rel='prev'></i>",
         "total" => $posts->max_num_pages,
         "type" => "array"))
 
