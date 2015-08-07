@@ -128,14 +128,15 @@ module.exports = (grunt) ->
           cwd: "src/themes/theme-juice/functions"
           src: ["**/*.*"]
           dest: "app/themes/theme-juice/"
+          rename: (dest, src) -> dest + src.replace(/\/functions\//, "/")
         }]
 
       templates:
         files: [{
           expand: yes
-          cwd: "src/themes"
+          cwd: "src/themes/theme-juice/templates"
           src: ["**/*.php"]
-          dest: "app/themes/"
+          dest: "app/themes/theme-juice/"
           rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
         }]
 
