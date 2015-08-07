@@ -57,6 +57,12 @@ wp-cli.local.yml
 vendor/*
 
 #
+# Compiled CoffeeScript
+#
+src/themes/**/scripts/*.js
+!src/themes/**/scripts/vendor/*.js
+
+#
 # Vagrant/VVV files for local development
 #
 vvv-nginx.conf
