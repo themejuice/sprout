@@ -13,7 +13,7 @@ use \ThemeJuice\Theme;
  *  asset that is already enqueued with the same name. This can be used to
  *  your advantage with assets such as jQuery.
  *
- * @var {Object} $theme
+ * @var {Obj} $theme
  */
 $theme = new Theme(array(
 
