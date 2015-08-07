@@ -2,9 +2,9 @@
 _This is an internal starter theme for [Produce Results](http://produceresults.com/). You are free to use this theme in any way you like; however, we retain the right to make breaking changes at any time and to deny pull requests if they do not fit within our company's development processes. You are free to fork this repository and modify it as you see fit. If you do go that route, let us know and we can add it into the list of available starter themes for our [command line utility, `tj`](https://github.com/ezekg/theme-juice-cli)._
 
 ## Development dependencies
-  * [Ruby >= 1.9.3](https://www.ruby-lang.org/en/)
+  * [Theme Juice CLI](https://github.com/ezekg/theme-juice-cli) (optional)
+  * [Ruby >= 1.9.3](https://www.ruby-lang.org/en/) ([Use RVM, or something similar to avoid having to use `sudo`](https://rvm.io/rvm/install))
   * [NPM](https://www.npmjs.com/) ([Here's a good guide on properly installing NPM to not need `sudo`](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/))
-  * [Theme Juice CLI](https://github.com/ezekg/theme-juice-cli)
   * [Composer](https://getcomposer.org/)
   * [Bundler](http://bundler.io/)
   * [WP CLI](http://wp-cli.org/)
