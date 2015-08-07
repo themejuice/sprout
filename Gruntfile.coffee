@@ -89,7 +89,7 @@ module.exports = (grunt) ->
           rename: (dest, src) -> dest + src.replace(/\/fonts\//, "/assets/fonts/")
         },
         {
-          expand: true
+          expand: yes
           cwd: "bower_components/font-awesome/fonts"
           src: ["**/*.*"]
           dest: "app/themes/theme-juice/assets/fonts/"
@@ -251,8 +251,8 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask "templates", [
-    "copy:templates"
     "haml"
+    "copy:templates"
   ]
 
   grunt.registerTask "styles", [
