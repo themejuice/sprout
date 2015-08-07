@@ -208,7 +208,7 @@ module.exports = (grunt) ->
         files: [
           "src/themes/theme-juice/fonts/**/*.woff"
           "src/themes/theme-juice/fonts/**/*.woff2"
-          "src/themes/theme-juice/fonts/**/*.tff"
+          "src/themes/theme-juice/fonts/**/*.ttf"
           "src/themes/theme-juice/fonts/**/*.eot"
           "src/themes/theme-juice/fonts/**/*.svg"
           "src/themes/theme-juice/fonts/**/*.otf"
