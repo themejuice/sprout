@@ -109,15 +109,6 @@ module.exports = (grunt) ->
           rename: (dest, src) -> dest + src.replace(/\/functions\//, "/")
         }]
 
-      templates:
-        files: [{
-          expand: yes
-          cwd: "src/themes/theme-juice/templates"
-          src: ["**/*.php"]
-          dest: "app/themes/theme-juice/"
-          rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
-        }]
-
     cssmin:
       dist:
         files:
@@ -199,7 +190,6 @@ module.exports = (grunt) ->
         ]
         tasks: [
           "newer:haml"
-          "newer:copy:templates"
         ]
         options:
           livereload: yes
@@ -252,7 +242,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask "templates", [
     "haml"
-    "copy:templates"
   ]
 
   grunt.registerTask "styles", [
