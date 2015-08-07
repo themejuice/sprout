@@ -14,6 +14,11 @@ _This is an internal starter theme for [Produce Results](http://produceresults.c
 ## Installation
 After all of the required tools are properly installed and they're executable without `sudo`, run `tj install` to execute the theme installation defined in the `Juicefile`.
 
+## Included Packages
+* [Core](https://github.com/ezekg/theme-juice-core)
+* [Functions](https://github.com/ezekg/theme-juice-functions) (commonly used helper-functions)
+* [Shortcodes](https://github.com/ezekg/theme-juice-shortcodes) (commonly used shortcodes)
+
 ## Getting started
 
 #### Setting up a new project
