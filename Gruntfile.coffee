@@ -92,7 +92,7 @@ module.exports = (grunt) ->
           expand: yes
           cwd: "bower_components/font-awesome/fonts"
           src: ["**/*.*"]
-          dest: "app/themes/theme-juice/assets/fonts/"
+          dest: "app/themes/theme-juice/assets/fonts/font-awesome/"
         }]
 
       scripts:
