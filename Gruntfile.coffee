@@ -65,20 +65,34 @@ module.exports = (grunt) ->
         banner: "<%= banner %>"
       dist:
         src: [
+          "bower_components/stats.js/build/stats.min.js"
+          "bower_components/imagesloaded/imagesloaded.pkgd.min.js"
+          "bower_components/gsap/src/minified/jquery.gsap.min.js"
+          "bower_components/gsap/src/minified/plugins/BezierPlugin.min.js"
+          "bower_components/gsap/src/minified/TimelineMax.min.js"
+          "bower_components/gsap/src/minified/TweenMax.min.js"
+          "bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
+          "bower_components/scrollmagic/scrollmagic/minified/plugins/jquery.ScrollMagic.min.js"
+          "bower_components/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js"
+          "bower_components/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js"
           "src/themes/theme-juice/scripts/vendor/*.js"
+          "src/themes/theme-juice/scripts/polyfill.js"
+          "src/themes/theme-juice/scripts/Logger.js"
+          "src/themes/theme-juice/scripts/debugger.js"
+          "src/themes/theme-juice/scripts/event-observer.js"
+          "src/themes/theme-juice/scripts/renderer.js"
+          "src/themes/theme-juice/scripts/canvas.js"
+          "src/themes/theme-juice/scripts/pixelizer.js"
+          "src/themes/theme-juice/scripts/particle.js"
+          "src/themes/theme-juice/scripts/emitter.js"
+          "src/themes/theme-juice/scripts/pill.js"
+          "src/themes/theme-juice/scripts/bottle.js"
+          "src/themes/theme-juice/scripts/product-rendering.js"
           "src/themes/theme-juice/scripts/app.js"
         ]
         dest: "app/themes/theme-juice/assets/scripts/main.js"
 
     copy:
-      custom:
-        files: [{
-          expand: yes
-          cwd: "src/themes/theme-juice/custom"
-          src: ["**/*.*"]
-          dest: "app/themes/theme-juice/custom/"
-        }]
-
       favicon:
         files: [{
           expand: yes
@@ -92,11 +106,10 @@ module.exports = (grunt) ->
         files: [{
           expand: yes
           cwd: "src/themes/theme-juice/fonts"
-          src: ["**/*.{woff,woff2,tff,eot,svg,otf}"]
+          src: ["**/*.{woff,woff2,ttf,eot,svg,otf}"]
           dest: "app/themes/theme-juice/assets/fonts/"
           rename: (dest, src) -> dest + src.replace(/\/fonts\//, "/assets/fonts/")
         },
-        # FontAwesome
         {
           expand: true
           cwd: "bower_components/font-awesome/fonts"
@@ -106,9 +119,16 @@ module.exports = (grunt) ->
 
       scripts:
         files:
-          # jQuery
           "app/themes/theme-juice/assets/scripts/jquery.min.js": ["bower_components/jquery/dist/jquery.min.js"]
           "app/themes/theme-juice/assets/scripts/jquery.min.map": ["bower_components/jquery/dist/jquery.min.map"]
+
+      functions:
+        files: [{
+          expand: yes
+          cwd: "src/themes/theme-juice/functions"
+          src: ["**/*.*"]
+          dest: "app/themes/theme-juice/"
+        }]
 
       templates:
         files: [{
@@ -147,7 +167,7 @@ module.exports = (grunt) ->
         files: [{
           expand: yes
           cwd: "src/themes/theme-juice/images"
-          src: ["**/*.{png,jpg,gif,svg}"]
+          src: ["**/*.{jpg,jpeg,png,gif,svg}"]
           dest: "app/themes/theme-juice/assets/images/"
         }]
 
@@ -184,10 +204,19 @@ module.exports = (grunt) ->
         options:
           livereload: yes
 
+      functions:
+        files: [
+          "src/themes/**/*.php"
+        ]
+        tasks: [
+          "newer:copy:functions"
+        ]
+        options:
+          livereload: yes
+
       templates:
         files: [
           "src/themes/**/*.haml"
-          "src/themes/**/*.php"
         ]
         tasks: [
           "newer:haml"
@@ -212,6 +241,7 @@ module.exports = (grunt) ->
       images:
         files: [
           "src/themes/theme-juice/images/**/*.jpg"
+          "src/themes/theme-juice/images/**/*.jpeg"
           "src/themes/theme-juice/images/**/*.png"
           "src/themes/theme-juice/images/**/*.gif"
           "src/themes/theme-juice/images/**/*.svg"
@@ -220,13 +250,11 @@ module.exports = (grunt) ->
         options:
           livereload: yes
 
-  # Default task
   grunt.registerTask "default", [
     "build"
     "watch"
   ]
 
-  # Build task
   grunt.registerTask "build", [
     "clean"
     "file-creator"
@@ -237,27 +265,23 @@ module.exports = (grunt) ->
     "scripts"
   ]
 
-  # Assets
   grunt.registerTask "assets", [
-    "copy:custom"
     "copy:favicon"
     "copy:fonts"
+    "copy:functions"
   ]
 
-  # Templates
   grunt.registerTask "templates", [
     "copy:templates"
     "haml"
   ]
 
-  # Styles
   grunt.registerTask "styles", [
     "compass"
     "autoprefixer"
     "cssmin"
   ]
 
-  # Scripts
   grunt.registerTask "scripts", [
     "copy:scripts"
     "coffee"
