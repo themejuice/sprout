@@ -3,7 +3,10 @@
   .sidebar__section
     %h2 Categories
     %ul.categories
-      = wp_list_categories( array( "title_li" => false, "orderby" => "count", "orderby" => "title", "order" => "asc" ) )
+      = wp_list_categories(array("title_li" => false,
+        "orderby" => "count",
+        "orderby" => "title",
+        "order" => "asc"))
 
   // categories
 
