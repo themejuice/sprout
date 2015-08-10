@@ -1,5 +1,5 @@
 /**
- * Strip ul els to bare list
+ * Strip list to a bare list
  *
  * @example
  *   ```haml
@@ -12,20 +12,20 @@
  *
  *   ```sass
  *   ul
- *     @extend %bare-ul
+ *     @extend %bare-list
  *   ```
  */
-%bare-ul
+%bare-list
   display: block
   list-style: none
   margin: 0
   padding: 0
 
 /**
- * @see %bare-ul
+ * @see %bare-list
  */
 %navigation
-  @extend %bare-ul
+  @extend %bare-list
 
 /**
  * Justified navigation
@@ -45,7 +45,7 @@
  *   ```
  */
 %justified-navigation
-  @extend %bare-ul
+  @extend %bare-list
   text-align: justify
   width: 100%
   margin: 0 auto
