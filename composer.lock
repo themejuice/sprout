@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fbd7925690c28faeb69c1114ec6a8b78",
+    "hash": "ba013321fb4f37462eacaf923053b830",
     "packages": [
         {
             "name": "composer/installers",
@@ -329,10 +329,10 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.2.3.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.2.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -343,15 +343,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.1.1"
+                "reference": "tags/1.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -363,15 +363,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.4.4",
+            "version": "5.4.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.4.4"
+                "reference": "tags/5.4.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -423,15 +423,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.3.2",
+            "version": "2.3.4",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.3.2"
+                "reference": "tags/2.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -468,13 +468,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/x-team/wp-cli-ssh.git",
-                "reference": "7695c9ebea9ea9c51799ea88611aef0c0a4e5dba"
+                "url": "https://github.com/xwp/wp-cli-ssh.git",
+                "reference": "5e12338ca07f0a1830f19259897b97a69ab292c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/x-team/wp-cli-ssh/zipball/7695c9ebea9ea9c51799ea88611aef0c0a4e5dba",
-                "reference": "7695c9ebea9ea9c51799ea88611aef0c0a4e5dba",
+                "url": "https://api.github.com/repos/xwp/wp-cli-ssh/zipball/5e12338ca07f0a1830f19259897b97a69ab292c4",
+                "reference": "5e12338ca07f0a1830f19259897b97a69ab292c4",
                 "shasum": ""
             },
             "require": {
@@ -511,7 +511,7 @@
                 "ssh",
                 "wp-cli"
             ],
-            "time": "2014-06-06 19:16:44"
+            "time": "2015-07-29 16:06:25"
         }
     ],
     "aliases": [],
