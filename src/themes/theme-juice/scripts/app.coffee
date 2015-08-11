@@ -1,4 +1,4 @@
 "use-strict"
 
-$(document).ready ->
+jQuery(document).ready ($) ->
   $("html").removeClass "no-js"
