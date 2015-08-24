@@ -4,7 +4,7 @@ _This is an internal starter theme for [Produce Results](http://produceresults.c
 ## Features
 * Awesome and trendy tech! Develop with [PHP Haml](https://github.com/arnaud-lb/MtHaml), [CoffeeScript](https://github.com/gruntjs/grunt-contrib-coffee) and [Sass](https://github.com/gruntjs/grunt-contrib-sass)
 * Dependency management with Composer and Bower, allowing easier version control
-* Better folder structure, allowing WordPress to be installed with Composer inside its own directory
+* More organized folder structure, allowing WordPress to be inside its own directory
 * Manage different environments with [Dotenv](https://github.com/vlucas/phpdotenv), all from a single codebase
 
 When used with [Theme Juice CLI](https://github.com/ezekg/theme-juice-cli), you can also:
