@@ -50,13 +50,23 @@
  * @param {Number} $columns           - Amount to shift columns
  * @param {Bool}   $has-gutter (true) - Add gutter value to shift
  *
+ * @example
+ *  ```sass
+ *  div
+ *    +_("large", 12)
+ *    +shift("large", -4)
+ *  ```
+ *
  * @output - Margin to shift columns
  */
 @mixin shift($breakpoint, $columns, $has-gutter: true)
+  @if not index(flint-get-all-keys(), $breakpoint)
+    @error "Breakpoint '#{$breakpoint}' does not exist. Shifting by '#{$columns}' failed."
+
   $width-map: flint-calc-width($breakpoint, $columns)
   $gutter: if($has-gutter, flint-get-gutter(), 0)
 
-  @include _($breakpoint)
+  +_($breakpoint)
     @if map-fetch($flint, "settings", "grid") == "fluid"
       margin-left: (map-get($width-map, "target") + $gutter) / map-get($width-map, "context") * 100%
     @else
