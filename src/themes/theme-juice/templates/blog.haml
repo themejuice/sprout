@@ -2,16 +2,18 @@
 
 - tj_include_partial("partials/header")
 
-%main.main__wrapper
-  .main.main--blog
-    %h1= tj_title()
+%main.blog__wrapper
+  .blog
+    .content
+      %h1= tj_title()
 
-    - $query_var = tj_query_var()
-    - $posts = new WP_Query(array("post_type" => "post",
-        "paged" => $query_var,
-        "showposts" => 5))
+      - $query_var = tj_query_var()
+      - $posts = new WP_Query(array("post_type" => "post",
+          "paged" => $query_var,
+          "showposts" => 5))
 
-    - tj_include_partial("partials/posts", array("posts" => &$posts))
+      - tj_include_partial("partials/posts", array("posts" => &$posts))
+
     - tj_include_partial("partials/sidebar")
 
 - tj_include_partial("partials/pagination", array("posts" => &$posts,
