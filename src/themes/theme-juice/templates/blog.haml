@@ -12,12 +12,13 @@
           "paged" => $query_var,
           "showposts" => 5))
 
-      - tj_include_partial("partials/posts", array("posts" => &$posts))
+      - tj_include_partial("partials/posts",
+          array("posts" => $posts))
 
     - tj_include_partial("partials/sidebar")
 
-- tj_include_partial("partials/pagination", array("posts" => &$posts,
-    "query_var" => &$query_var))
+- tj_include_partial("partials/pagination",
+    array("posts" => $posts, "query_var" => $query_var))
 
 - wp_reset_query()
 

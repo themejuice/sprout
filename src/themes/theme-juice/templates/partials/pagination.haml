@@ -1,26 +1,27 @@
-%nav.pagination__wrapper(role="complementary")
-  .pagination
-    - $pagination_pages = paginate_links(array("current" => max(1, $query_var),
-        "next_text" => "<i class='fa fa-chevron-right' rel='next'></i>",
-        "prev_text" => "<i class='fa fa-chevron-left' rel='prev'></i>",
-        "total" => $posts->max_num_pages,
-        "type" => "array"))
+- if ( $posts->have_posts() )
+  %nav.pagination__wrapper(role="complementary")
+    .pagination
+      - $pagination_pages = paginate_links(array("current" => max(1, $query_var),
+          "next_text" => "<i class='fa fa-chevron-right' rel='next'></i>",
+          "prev_text" => "<i class='fa fa-chevron-left' rel='prev'></i>",
+          "total" => $posts->max_num_pages,
+          "type" => "array"))
 
-    -# Sometimes paginate_links() returns a string, so we're suppressing the
-    -#  error that might happen here instead of doing a check
-    - if ( ! @empty( $pagination_pages ) )
+      -# Sometimes paginate_links() returns a string, so we're suppressing the
+      -#  error that might happen here instead of doing a check
+      - if ( ! @empty( $pagination_pages ) )
 
-      - $pagination_prev = count(preg_grep("/fa-chevron-left/",
-          $pagination_pages)) > 0 ? array_shift($pagination_pages) : null
-      - $pagination_next = count(preg_grep("/fa-chevron-right/",
-          $pagination_pages)) > 0 ? array_pop($pagination_pages) : null
+        - $pagination_prev = count(preg_grep("/fa-chevron-left/",
+            $pagination_pages)) > 0 ? array_shift($pagination_pages) : null
+        - $pagination_next = count(preg_grep("/fa-chevron-right/",
+            $pagination_pages)) > 0 ? array_pop($pagination_pages) : null
 
-      .pagination__prev= $pagination_prev
+        .pagination__prev= $pagination_prev
 
-      .pagination__pages
-        - foreach ( $pagination_pages as $pagination_page )
-          .pagination__pages__page= $pagination_page
+        .pagination__pages
+          - foreach ( $pagination_pages as $pagination_page )
+            .pagination__pages__page= $pagination_page
 
-      .pagination__next= $pagination_next
+        .pagination__next= $pagination_next
 
-// pagination
+  // pagination
