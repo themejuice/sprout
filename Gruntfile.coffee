@@ -199,7 +199,7 @@ module.exports = (grunt) ->
           "app/themes/theme-juice/assets/images/**/*.{jpg,jpeg,png,gif,svg}"
           "app/themes/theme-juice/assets/css/**/*.css"
           "app/themes/theme-juice/assets/scripts/**/*.js"
-          "app/themes/theme-juice/**/*.{html,phtml,php}"
+          "app/themes/theme-juice/**/*.{html,php}"
         ]
 
   grunt.registerTask "default", [
