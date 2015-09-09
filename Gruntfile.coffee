@@ -55,20 +55,26 @@ module.exports = (grunt) ->
       dist:
         options:
           cssDir: "app/themes/theme-juice/assets/css"
+          sassDir: "src/themes/theme-juice/styles"
           httpPath: "/"
           outputStyle: "expanded"
-          require: ["flint", "sass-globbing", "graphite", "sassy-export", "stampy"]
-          sassDir: "src/themes/theme-juice/styles"
+          require: [
+            "flint"
+            "sass-globbing"
+            "graphite"
+            "sassy-export"
+            "stampy"
+          ]
 
     concat:
       options:
         banner: "<%= banner %>"
       dist:
+        dest: "app/themes/theme-juice/assets/scripts/main.js"
         src: [
           "src/themes/theme-juice/scripts/vendor/*.js"
           "src/themes/theme-juice/scripts/app.js"
         ]
-        dest: "app/themes/theme-juice/assets/scripts/main.js"
 
     copy:
       favicon:
@@ -86,7 +92,7 @@ module.exports = (grunt) ->
           cwd: "src/themes/theme-juice/fonts"
           src: ["**/*.{woff,woff2,ttf,eot,svg,otf}"]
           dest: "app/themes/theme-juice/assets/fonts/"
-          rename: (dest, src) -> dest + src.replace(/\/fonts\//, "/assets/fonts/")
+          rename: (dest, src) -> dest + src.replace("/fonts/", "/assets/fonts/")
         },
         {
           expand: yes
@@ -105,7 +111,7 @@ module.exports = (grunt) ->
           cwd: "src/themes/theme-juice/functions"
           src: ["**/*.*"]
           dest: "app/themes/theme-juice/"
-          rename: (dest, src) -> dest + src.replace(/\/functions\//, "/")
+          rename: (dest, src) -> dest + src.replace("/functions/", "/")
         }]
 
     cssmin:
@@ -123,7 +129,7 @@ module.exports = (grunt) ->
           src: ["**/*.haml"]
           dest: "app/themes/"
           ext: ".php"
-          rename: (dest, src) -> dest + src.replace(/\/templates\//, "/")
+          rename: (dest, src) -> dest + src.replace("/templates/", "/")
         }]
 
     imagemin:
@@ -149,74 +155,52 @@ module.exports = (grunt) ->
 
     watch:
       gruntfile:
+        tasks: ["default"]
         files: [
           "Gruntfile.coffee"
           "Gruntfile.js"
         ]
-        tasks: ["default"]
 
       scripts:
+        tasks: ["scripts"]
         files: [
           "src/themes/**/*.coffee"
           "src/themes/**/*.js"
         ]
-        tasks: ["scripts"]
-        options:
-          livereload: yes
 
       styles:
+        tasks: ["styles"]
         files: [
           "src/themes/**/*.sass"
           "src/themes/**/*.scss"
         ]
-        tasks: ["styles"]
-        options:
-          livereload: yes
 
       functions:
-        files: [
-          "src/themes/**/*.php"
-        ]
-        tasks: [
-          "newer:copy:functions"
-        ]
-        options:
-          livereload: yes
+        tasks: ["newer:copy:functions"]
+        files: ["src/themes/**/*.php"]
 
       templates:
-        files: [
-          "src/themes/**/*.haml"
-        ]
-        tasks: [
-          "newer:haml"
-        ]
-        options:
-          livereload: yes
+        tasks: ["newer:haml"]
+        files: ["src/themes/**/*.haml"]
 
       fonts:
-        files: [
-          "src/themes/theme-juice/fonts/**/*.woff"
-          "src/themes/theme-juice/fonts/**/*.woff2"
-          "src/themes/theme-juice/fonts/**/*.ttf"
-          "src/themes/theme-juice/fonts/**/*.eot"
-          "src/themes/theme-juice/fonts/**/*.svg"
-          "src/themes/theme-juice/fonts/**/*.otf"
-        ]
         tasks: ["newer:copy:fonts"]
-        options:
-          livereload: yes
+        files: ["src/themes/theme-juice/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"]
 
       images:
-        files: [
-          "src/themes/theme-juice/images/**/*.jpg"
-          "src/themes/theme-juice/images/**/*.jpeg"
-          "src/themes/theme-juice/images/**/*.png"
-          "src/themes/theme-juice/images/**/*.gif"
-          "src/themes/theme-juice/images/**/*.svg"
-        ]
         tasks: ["newer:imagemin"]
+        files: ["src/themes/theme-juice/images/**/*.{jpg,jpeg,png,gif,svg}"]
+
+      livereload:
         options:
           livereload: yes
+        files: [
+          "app/themes/theme-juice/assets/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"
+          "app/themes/theme-juice/assets/images/**/*.{jpg,jpeg,png,gif,svg}"
+          "app/themes/theme-juice/assets/css/**/*.css"
+          "app/themes/theme-juice/assets/js/**/*.js"
+          "app/themes/theme-juice/**/*.{html,phtml,php}"
+        ]
 
   grunt.registerTask "default", [
     "build"
