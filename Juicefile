@@ -98,11 +98,11 @@ deployment:
 
   # Slack integration
   # @see https://github.com/onthebeach/capistrano-slackify
-  slack:
-    url: https://hooks.slack.com/services/your-token
-    username: Deploybot
-    channel: "#devops"
-    emoji: ":rocket:"
+  # slack:
+  #   url: https://hooks.slack.com/services/your-token
+  #   username: Deploybot
+  #   channel: "#devops"
+  #   emoji: ":rocket:"
 
   # Deployment stages
   stages:
