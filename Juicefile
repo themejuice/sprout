@@ -100,7 +100,6 @@ deployment:
   # @see https://github.com/onthebeach/capistrano-slackify
   slack:
     url: https://hooks.slack.com/services/your-token
-    subdomain: example
     username: deploybot
     channel: "#devops"
     emoji: ":rocket:"
