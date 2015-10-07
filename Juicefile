@@ -62,6 +62,11 @@ deployment:
       keys: ~/.ssh/id_rsa
       forward_agent: true
       paranoid: true
+    # Add additional directories to $PATH. This is useful if you're
+    #  on a shared hosting environment (i.e. GoDaddy) and you need
+    #  to use an executable such as wp-cli for database migration.
+    # default_env:
+    #   path: /opt/wp-cli/bin:$PATH
 
   # Capistrano rsync options and install procedure
   # @see https://github.com/Bladrak/capistrano-rsync
