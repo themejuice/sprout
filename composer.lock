@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ba013321fb4f37462eacaf923053b830",
+    "hash": "db8c639c4d87bb474be4d461791dba24",
+    "content-hash": "5589424762ad597f9adffb027ca8b765",
     "packages": [
         {
             "name": "composer/installers",
@@ -145,16 +146,16 @@
         },
         {
             "name": "theme-juice/theme-juice-core",
-            "version": "0.3.3",
+            "version": "0.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezekg/theme-juice-core.git",
-                "reference": "6648e4f21bdbf1a933727ade6d40768ea5c530a0"
+                "reference": "2920de96cb0dd6875fd06715b7b83f911e5b12a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezekg/theme-juice-core/zipball/6648e4f21bdbf1a933727ade6d40768ea5c530a0",
-                "reference": "6648e4f21bdbf1a933727ade6d40768ea5c530a0",
+                "url": "https://api.github.com/repos/ezekg/theme-juice-core/zipball/2920de96cb0dd6875fd06715b7b83f911e5b12a8",
+                "reference": "2920de96cb0dd6875fd06715b7b83f911e5b12a8",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +188,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2015-06-24 19:22:52"
+            "time": "2015-09-04 17:39:57"
         },
         {
             "name": "theme-juice/theme-juice-functions",
@@ -329,10 +330,10 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "4.2.4",
+            "version": "4.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.2.4.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -363,15 +364,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.4.5",
+            "version": "5.4.6",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.4.5"
+                "reference": "tags/5.4.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.4.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -423,15 +424,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/2.3.4"
+                "reference": "tags/2.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.3.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -520,6 +521,7 @@
         "x-team/wp-cli-ssh": 20
     },
     "prefer-stable": false,
+    "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.0"
     },
