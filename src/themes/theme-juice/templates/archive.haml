@@ -1,0 +1,24 @@
+- /* Template Name: Archive */
+
+- global $wp_query
+
+- tj_include_partial("partials/header")
+
+%main.archive__wrapper
+  .archive
+    .content
+      %h1= tj_title()
+
+    - if ( $wp_query->have_posts() )
+      - tj_include_partial("partials/posts",
+          array("posts" => $wp_query))
+    - else
+      - tj_include_partial("partials/error",
+          array("message" => "There don't seem to be any blog posts at this time"))
+
+    - tj_include_partial("partials/sidebar")
+
+- tj_include_partial("partials/pagination",
+    array("posts" => $wp_query))
+
+- tj_include_partial("partials/footer")

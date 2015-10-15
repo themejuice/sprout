@@ -12,8 +12,12 @@
           "paged" => $query_var,
           "showposts" => 5))
 
-      - tj_include_partial("partials/posts",
-          array("posts" => $posts))
+      - if ( $posts->have_posts() )
+        - tj_include_partial("partials/posts",
+            array("posts" => $posts))
+      - else
+        - tj_include_partial("partials/error",
+            array("message" => "There don't seem to be any blog posts at this time"))
 
     - tj_include_partial("partials/sidebar")
 
