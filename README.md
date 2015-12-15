@@ -32,19 +32,19 @@ After all of the required tools are properly installed and they're executable wi
 ## Getting started
 
 #### Setting up a new project
-If you're starting a new project, run `tj new` and follow the prompts.
+If you're starting a new project, run `tj create` and follow the prompts.
 
 #### Setting up an existing project
 If you're working on an existing project, run `tj setup` and follow the prompts.
 
 #### Building a project
-To build a project (compile assets, install dependencies, etc.), run `tj build`.
+To build a project (compile assets, install dependencies, etc.), run `tj install`.
 
 #### Watching and compiling assets
 To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
 
 #### Installing front-end dependencies
-To install and update Bower dependencies, run `tj assets install`, `tj asset install <package>`. See Bower documentation for additional commands.
+To install and update Bower dependencies, run `tj assets install`, `tj assets install <package>`. See Bower documentation for additional commands.
 
 #### Installing back-end dependencies
 To install and update Composer dependencies, run `tj vendor install` or `tj vendor update`. See Composer documentation for additional commands.
