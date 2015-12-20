@@ -41,7 +41,7 @@ If you're working on an existing project, run `tj setup` and follow the prompts.
 To build a project (compile assets, install dependencies, etc.), run `tj install`.
 
 #### Watching and compiling assets
-To watch and compile assets with Grunt, run `tj watch`. To compile assets without starting a watch, run `tj dev build`. See Grunt documentation for additional commands.
+To watch and compile assets with Grunt, run `tj watch`. See Grunt documentation for additional commands.
 
 #### Installing front-end dependencies
 To install and update Bower dependencies, run `tj assets install`, `tj assets install <package>`. See Bower documentation for additional commands.
