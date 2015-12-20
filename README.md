@@ -107,6 +107,8 @@ We try to follow the [12 factor app](http://12factor.net/) philosophy as closely
 * Other site-assets, such as custom controllers are written in PHP
 
 ## Deploying to production
+***If possibly, deploy using [`tj`](http://themejuice.it/deploy). It will automate everything below.***
+
 When deploying to production, ensure that you do _not_ deploy the `robots.txt` file, and that you disable the dynamic hostname plugin. Do not deploy the `src/` directory, or any of the build files e.g. `Gruntfile.coffee`, `bower.json`, `package.json`, `composer.json`, `composer.lock`.
 
 ## Roadmap
