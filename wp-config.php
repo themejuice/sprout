@@ -15,7 +15,7 @@ $environment = function() {
   );
 
   foreach ( $stages as $stage ) {
-    if ( file_exists( __DIR__ . "/.env.{$stage}" ) ) {
+    if ( file_exists(__DIR__ . "/.env.{$stage}") ) {
       return $stage;
     }
   }
@@ -29,9 +29,9 @@ $environment = function() {
  */
 try {
   if ( $stage = $environment() ) {
-    Dotenv::load( __DIR__, ".env.{$stage}" );
+    Dotenv::load(__DIR__, ".env.{$stage}");
   } else {
-    Dotenv::load( __DIR__ );
+    Dotenv::load(__DIR__);
   }
 } catch (Exception $e) {
   // Continue to see if required ENV variables are set another way...
@@ -54,15 +54,15 @@ try {
 /**
  * Stage
  */
-define( "WP_ENV", getenv("WP_ENV") ?: "development" );
+define("WP_ENV", getenv("WP_ENV") ?: "development");
 
 /**
  * Database
  */
-define( "DB_NAME", getenv("DB_NAME") );
-define( "DB_USER", getenv("DB_USER") );
-define( "DB_PASSWORD", getenv("DB_PASSWORD") );
-define( "DB_HOST", getenv("DB_HOST") );
+define("DB_NAME", getenv("DB_NAME"));
+define("DB_USER", getenv("DB_USER"));
+define("DB_PASSWORD", getenv("DB_PASSWORD"));
+define("DB_HOST", getenv("DB_HOST"));
 
 /**
  * Debug
@@ -72,35 +72,35 @@ define( "DB_HOST", getenv("DB_HOST") );
  *
  * @see http://php.net/manual/en/function.filter-var.php
  */
-define( "WP_DEBUG", filter_var( getenv("WP_DEBUG"), FILTER_VALIDATE_BOOLEAN ) );
+define("WP_DEBUG", filter_var(getenv("WP_DEBUG"), FILTER_VALIDATE_BOOLEAN));
 
 /**
  * URLs
  */
-define( "WP_HOME", getenv("WP_HOME") );
-define( "WP_SITEURL", getenv("WP_SITEURL") );
+define("WP_HOME", getenv("WP_HOME"));
+define("WP_SITEURL", getenv("WP_SITEURL"));
 
 /**
  * Authentication Unique Keys and Salts
  */
-define( "AUTH_KEY", getenv("AUTH_KEY") ?: "" );
-define( "SECURE_AUTH_KEY", getenv("SECURE_AUTH_KEY") ?: "" );
-define( "LOGGED_IN_KEY", getenv("LOGGED_IN_KEY") ?: "" );
-define( "NONCE_KEY", getenv("NONCE_KEY") ?: "" );
-define( "AUTH_SALT", getenv("AUTH_SALT") ?: "" );
-define( "SECURE_AUTH_SALT", getenv("SECURE_AUTH_SALT") ?: "" );
-define( "LOGGED_IN_SALT", getenv("LOGGED_IN_SALT") ?: "" );
-define( "NONCE_SALT", getenv("NONCE_SALT") ?: "" );
+define("AUTH_KEY", getenv("AUTH_KEY") ?: "");
+define("SECURE_AUTH_KEY", getenv("SECURE_AUTH_KEY") ?: "");
+define("LOGGED_IN_KEY", getenv("LOGGED_IN_KEY") ?: "");
+define("NONCE_KEY", getenv("NONCE_KEY") ?: "");
+define("AUTH_SALT", getenv("AUTH_SALT") ?: "");
+define("SECURE_AUTH_SALT", getenv("SECURE_AUTH_SALT") ?: "");
+define("LOGGED_IN_SALT", getenv("LOGGED_IN_SALT") ?: "");
+define("NONCE_SALT", getenv("NONCE_SALT") ?: "");
 
 /**
  * Database Charset to use in creating database tables.
  */
-define( "DB_CHARSET", "utf8" );
+define("DB_CHARSET", "utf8");
 
 /**
  * The Database Collate type. Don't change this if in doubt.
  */
-define( "DB_COLLATE", "" );
+define("DB_COLLATE", "");
 
 /**
  * WordPress Database Table prefix.
@@ -118,20 +118,20 @@ $table_prefix = getenv("DB_TABLE_PREFIX") ?: "wp_";
  * de_DE.mo to wp-content/languages and set WPLANG to "de_DE" to enable German
  * language support.
  */
-define( "WPLANG", getenv("WP_LANG") ?: "" );
+define("WPLANG", getenv("WP_LANG") ?: "");
 
 /**
  * Custom content directory
  */
-define( "CONTENT_DIR", "/app" );
-define( "WP_CONTENT_DIR", __DIR__ . CONTENT_DIR );
-define( "WP_CONTENT_URL", WP_HOME . CONTENT_DIR );
+define("CONTENT_DIR", "/app");
+define("WP_CONTENT_DIR", __DIR__ . CONTENT_DIR);
+define("WP_CONTENT_URL", WP_HOME . CONTENT_DIR);
 
 /**
  * Must-use plugins directory
  */
-define( "WPMU_PLUGIN_DIR", WP_CONTENT_DIR . "/mu-plugins" );
-define( "WPMU_PLUGIN_URL", WP_CONTENT_URL . "/mu-plugins" );
+define("WPMU_PLUGIN_DIR", WP_CONTENT_DIR . "/mu-plugins");
+define("WPMU_PLUGIN_URL", WP_CONTENT_URL . "/mu-plugins");
 
 /**
  * Custom language directory
@@ -139,20 +139,20 @@ define( "WPMU_PLUGIN_URL", WP_CONTENT_URL . "/mu-plugins" );
  * @link http://svn.automattic.com/wordpress-i18n/
  * @link http://languages.koodimonni.fi/
  */
-define( "WP_LANG_DIR", WP_CONTENT_DIR . "/lang" );
+define("WP_LANG_DIR", WP_CONTENT_DIR . "/lang");
 
 /**
  * Other settings
  */
-define( "WP_DEFAULT_THEME", "theme-juice" );
-define( "DISALLOW_FILE_EDIT", true );
-define( "DISABLE_WP_CRON", true );
+define("WP_DEFAULT_THEME", "theme-juice");
+define("DISALLOW_FILE_EDIT", true);
+define("DISABLE_WP_CRON", true);
 
 /**
  * Absolute path to WP
  */
 if ( ! defined("ABSPATH") ) {
-  define( "ABSPATH", __DIR__ . "/wp/" );
+  define("ABSPATH", __DIR__ . "/wp/");
 }
 
 require_once ABSPATH . "wp-settings.php";

@@ -64,8 +64,8 @@ $theme = new Theme(array(
  * @link http://codex.wordpress.org/Function_Reference/register_nav_menus
  */
 register_nav_menus(array(
-  "primary_nav" => __( "Primary Navigation", "theme-juice" ),
-  "footer_nav" => __( "Footer Navigation", "theme-juice" ),
+  "primary_nav" => __("Primary Navigation", "theme-juice"),
+  "footer_nav" => __("Footer Navigation", "theme-juice"),
 ));
 
 /**
@@ -73,7 +73,7 @@ register_nav_menus(array(
  *
  * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/body_class
  */
-add_filter( "body_class", function() {
+add_filter("body_class", function() {
   $classes = array();
 
   if ( is_home() || is_front_page() ) {
@@ -87,7 +87,7 @@ add_filter( "body_class", function() {
   }
 
   return $classes;
-}, 10, 2 );
+}, 10, 2);
 
 /**
  * Add IE conditional tags to HTML
@@ -96,7 +96,7 @@ add_filter( "body_class", function() {
  *
  * @return {Arr}
  */
-add_filter( "tj_before_render_html", function( $buffer ) {
+add_filter("tj_before_render_html", function($buffer) {
   $buffer[] = "<!--[if lt IE 8]>\n";
   $buffer[] = "<html class='no-js lt-ie8' lang='en'>\n";
   $buffer[] = "<![endif]-->\n";
