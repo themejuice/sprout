@@ -67,12 +67,22 @@ define("DB_HOST", getenv("DB_HOST"));
 /**
  * Debug
  *
- * This filters the WP_DEBUG declaration from .env to a
+ * This filters the WP_DEBUG declaration from .env.{stage} to a
  *  boolean. Accepts strings like 'true', 'yes', etc.
  *
  * @see http://php.net/manual/en/function.filter-var.php
  */
 define("WP_DEBUG", filter_var(getenv("WP_DEBUG"), FILTER_VALIDATE_BOOLEAN));
+
+/**
+ * Cache
+ *
+ * This filters the WP_CACHE declaration from .env.{stage} to a
+ *  boolean. Accepts strings like 'true', 'yes', etc.
+ *
+ * @see http://php.net/manual/en/function.filter-var.php
+ */
+define("WP_CACHE", filter_var(getenv("WP_CACHE"), FILTER_VALIDATE_BOOLEAN));
 
 /**
  * URLs
