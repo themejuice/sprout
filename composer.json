@@ -29,6 +29,7 @@
     "theme-juice/theme-juice-core": "~0.3",
     "theme-juice/theme-juice-functions": "~0.2",
     "theme-juice/theme-juice-shortcodes": "~0.2",
+    "wpackagist-plugin/wp-fail2ban": "*",
     "wpackagist-plugin/wordpress-importer": "*",
     "wpackagist-plugin/regenerate-thumbnails": "*",
     "wpackagist-plugin/custom-post-type-ui": "*",
