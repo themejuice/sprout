@@ -75,6 +75,8 @@ deployment:
     cache: shared/deploy
     scm: :git
     depth: 1
+    # Options to pass to the rsync command
+    # @see http://linux.die.net/man/1/rsync
     options:
       - --recursive
       - --delete
@@ -94,12 +96,20 @@ deployment:
       - --exclude="package.json"
       - --exclude="bower.json"
       - --exclude="README.*"
+    # Run application install scripts
     install:
       - composer install --no-dev
       - bundle install
       - npm install
       - bower install
       - grunt build
+    # Run scripts before the deployment starts
+    # pre_scripts:
+    #   - touch .maintenance
+    # Run scripts before the deployment finishes
+    # post_scripts:
+    #   - rm .maintenance
+    #   - sudo service apache2 restart
 
   # Slack integration
   # @see https://github.com/onthebeach/capistrano-slackify
