@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "91d5e01825300751e0775f2178372c08",
-    "content-hash": "864d61aa162b3cd74094ceaf0dd1205e",
+    "hash": "7087f073155f280cf00b95818b24135e",
+    "content-hash": "d0ffbf613cd81736b832b7473d007ef1",
     "packages": [
         {
             "name": "composer/installers",
@@ -347,15 +347,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.2.1",
+            "version": "1.3.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.2.1"
+                "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
+                "reference": "tags/1.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.2.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -370,7 +370,7 @@
             "version": "5.4.6",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
                 "reference": "tags/5.4.6"
             },
             "dist": {
@@ -390,7 +390,7 @@
             "version": "2.2.6",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
                 "reference": "tags/2.2.6"
             },
             "dist": {
@@ -410,7 +410,7 @@
             "version": "0.6.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
                 "reference": "tags/0.6.1"
             },
             "dist": {
@@ -427,15 +427,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.0.7",
+            "version": "3.1.2",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.0.7"
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/3.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.0.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -447,15 +447,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-fail2ban",
-            "version": "2.3.2",
+            "version": "3.0.0",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-fail2ban/",
-                "reference": "tags/2.3.2"
+                "url": "https://plugins.svn.wordpress.org/wp-fail2ban/",
+                "reference": "tags/3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-fail2ban.2.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-fail2ban.3.0.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -472,7 +472,7 @@
             "version": "0.4.2",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/dynamic-hostname/",
+                "url": "https://plugins.svn.wordpress.org/dynamic-hostname/",
                 "reference": "tags/0.4.2"
             },
             "dist": {
