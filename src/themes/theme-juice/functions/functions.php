@@ -38,6 +38,7 @@ $theme = new Theme(array(
       "location" => "assets/scripts/jquery.min.js",
       "version" => "1.11.2",
       "in_footer" => true,
+      "priority" => 1,
     ),
 
     // Theme scripts
