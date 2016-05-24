@@ -1,0 +1,8 @@
+# encoding: UTF-8
+
+namespace :hello do
+  desc "Say 'Hello world!'"
+  task :world do
+    puts "Hello world!"
+  end
+end
