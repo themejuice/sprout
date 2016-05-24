@@ -10,10 +10,14 @@ commands:
     - npm install
     - bower install
     - grunt build
-
+  
   # Manage build tools
-  watch:
+  dev:
     - grunt %args%
+    
+  watch:
+    - echo "This command is deprecated! Use `tj dev` instead."
+    - tj dev %args%
 
   # Manage front-end dependencies
   assets:
