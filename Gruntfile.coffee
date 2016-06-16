@@ -61,7 +61,7 @@ module.exports = (grunt) ->
           require: [
             "flint"
             "sass-globbing"
-            "graphite"
+            "graphite-sass"
             "sassy-export"
             "stampy"
           ]
