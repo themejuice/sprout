@@ -1,8 +1,28 @@
 # encoding: UTF-8
 
-namespace :hello do
-  desc "Say 'Hello world!'"
-  task :world do
-    puts "Hello world!"
+# Example for a custom Capistrano task
+#
+# This task is run after the 'deploy:check' hook. For more information on deploy
+# flow, see: http://capistranorb.com/documentation/getting-started/flow/.
+task :ask_production_confirmation do
+  return null if fetch(:stage, nil) != :production
+
+  set :confirmed, proc {
+    puts <<-WARN
+
+========================================================================
+   WARNING: You're about run a deployment task on the production stage
+========================================================================
+
+    WARN
+    ask :answer, "Are you sure you want to continue? (y/N)"
+    fetch(:answer, nil) == 'y'
+  }.call
+
+  unless fetch(:confirmed)
+    puts "\nCancelled!"
+    exit
   end
 end
+
+before "deploy:check", :ask_production_confirmation

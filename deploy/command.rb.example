@@ -1,0 +1,11 @@
+# encoding: UTF-8
+
+# Example for defining custom Capistrano commands
+#
+# This custom command can be run via `tj remote {STAGE} hello:world`
+namespace :hello do
+  desc "Say 'Hello world!'"
+  task :world do
+    puts "Hello world!"
+  end
+end
