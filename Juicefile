@@ -6,7 +6,7 @@ commands:
   # Run application install scripts
   install:
     - composer install
-    - bundle install
+    - gem install bundler && bundle install
     - npm install
     - bower install
     - grunt build
