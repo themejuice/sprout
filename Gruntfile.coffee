@@ -23,21 +23,31 @@ module.exports = (grunt) ->
         ]
       dist:
         files:
-          "app/themes/theme-juice/assets/css/main.css": ["app/themes/theme-juice/assets/css/main.css"]
+          "app/themes/sprout/assets/css/main.css": ["app/themes/sprout/assets/css/main.css"]
 
     # Be careful with this. This clears _everything_ within
-    #  the app/themes/theme-juice/ directory
+    #  the app/themes/sprout/ directory
     clean:
       theme:
-        src: ["app/themes/theme-juice/**/*"]
+        src: ["app/themes/sprout/**/*"]
 
     # This create a style.css file required by WordPress
     "file-creator":
       options:
         openFlags: "w+"
       basic:
-        "app/themes/theme-juice/style.css": (fs, fd, done) ->
-          fs.writeSync fd, grunt.template.process("/*\nTheme Name: <%= pkg.name %>\nAuthor: <%= pkg.author.name %>\nAuthor URI: <%= pkg.author.homepage %>\nDescription: <%= pkg.description %>\nVersion: <%= pkg.version %>\n*/\n\n")
+        "app/themes/sprout/style.css": (fs, fd, done) ->
+          pkg = grunt.file.readJSON "package.json"
+          fs.writeSync fd, \
+            """
+            /*
+            Theme Name: #{pkg.name.replace(/-/, " ").replace(/(?:^|\s)\S/g, (s) -> s.toUpperCase())}
+            Author: #{pkg.author.name}
+            Author URI: #{pkg.author.homepage}
+            Description: #{pkg.description}
+            Version: #{pkg.version}
+            */
+            """
           done()
 
     coffee:
@@ -54,8 +64,8 @@ module.exports = (grunt) ->
     compass:
       dist:
         options:
-          cssDir: "app/themes/theme-juice/assets/css"
-          sassDir: "src/themes/theme-juice/styles"
+          cssDir: "app/themes/sprout/assets/css"
+          sassDir: "src/themes/sprout/styles"
           httpPath: "/"
           outputStyle: "expanded"
           require: [
@@ -70,54 +80,54 @@ module.exports = (grunt) ->
       options:
         banner: "<%= banner %>"
       dist:
-        dest: "app/themes/theme-juice/assets/scripts/main.js"
+        dest: "app/themes/sprout/assets/scripts/main.js"
         src: [
-          "src/themes/theme-juice/scripts/vendor/*.js"
-          "src/themes/theme-juice/scripts/app.js"
+          "src/themes/sprout/scripts/vendor/*.js"
+          "src/themes/sprout/scripts/app.js"
         ]
 
     copy:
       favicon:
         files: [{
           expand: yes
-          cwd: "src/themes/theme-juice"
+          cwd: "src/themes/sprout"
           src: ["favicon.ico"]
-          dest: "app/themes/theme-juice/"
+          dest: "app/themes/sprout/"
           rename: (dest, src) -> dest + src
         }]
 
       fonts:
         files: [{
           expand: yes
-          cwd: "src/themes/theme-juice/fonts"
+          cwd: "src/themes/sprout/fonts"
           src: ["**/*.{woff,woff2,ttf,eot,svg,otf}"]
-          dest: "app/themes/theme-juice/assets/fonts/"
+          dest: "app/themes/sprout/assets/fonts/"
           rename: (dest, src) -> dest + src.replace("/fonts/", "/assets/fonts/")
         },
         {
           expand: yes
           cwd: "bower_components/font-awesome/fonts"
           src: ["**/*.*"]
-          dest: "app/themes/theme-juice/assets/fonts/font-awesome/"
+          dest: "app/themes/sprout/assets/fonts/font-awesome/"
         }]
 
       scripts:
         files:
-          "app/themes/theme-juice/assets/scripts/jquery.min.js": ["bower_components/jquery/dist/jquery.min.js"]
+          "app/themes/sprout/assets/scripts/jquery.min.js": ["bower_components/jquery/dist/jquery.min.js"]
 
       functions:
         files: [{
           expand: yes
-          cwd: "src/themes/theme-juice/functions"
+          cwd: "src/themes/sprout/functions"
           src: ["**/*.*"]
-          dest: "app/themes/theme-juice/"
+          dest: "app/themes/sprout/"
           rename: (dest, src) -> dest + src.replace("/functions/", "/")
         }]
 
     cssmin:
       dist:
         files:
-          "app/themes/theme-juice/assets/css/main.min.css": ["app/themes/theme-juice/assets/css/main.css"]
+          "app/themes/sprout/assets/css/main.min.css": ["app/themes/sprout/assets/css/main.css"]
 
     haml:
       templates:
@@ -141,17 +151,17 @@ module.exports = (grunt) ->
           ]
         files: [{
           expand: yes
-          cwd: "src/themes/theme-juice/images"
+          cwd: "src/themes/sprout/images"
           src: ["**/*.{jpg,jpeg,png,gif,svg}"]
-          dest: "app/themes/theme-juice/assets/images/"
+          dest: "app/themes/sprout/assets/images/"
         }]
 
     uglify:
       options:
         banner: "<%= banner %>"
       dist:
-        src: ["app/themes/theme-juice/assets/scripts/main.js"]
-        dest: "app/themes/theme-juice/assets/scripts/main.min.js"
+        src: ["app/themes/sprout/assets/scripts/main.js"]
+        dest: "app/themes/sprout/assets/scripts/main.min.js"
 
     watch:
       gruntfile:
@@ -185,21 +195,21 @@ module.exports = (grunt) ->
 
       fonts:
         tasks: ["newer:copy:fonts"]
-        files: ["src/themes/theme-juice/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"]
+        files: ["src/themes/sprout/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"]
 
       images:
         tasks: ["newer:imagemin"]
-        files: ["src/themes/theme-juice/images/**/*.{jpg,jpeg,png,gif,svg}"]
+        files: ["src/themes/sprout/images/**/*.{jpg,jpeg,png,gif,svg}"]
 
       livereload:
         options:
           livereload: yes
         files: [
-          "app/themes/theme-juice/assets/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"
-          "app/themes/theme-juice/assets/images/**/*.{jpg,jpeg,png,gif,svg}"
-          "app/themes/theme-juice/assets/css/**/*.css"
-          "app/themes/theme-juice/assets/scripts/**/*.js"
-          "app/themes/theme-juice/**/*.{html,php}"
+          "app/themes/sprout/assets/fonts/**/*.{woff,woff2,ttf,eot,svg,otf}"
+          "app/themes/sprout/assets/images/**/*.{jpg,jpeg,png,gif,svg}"
+          "app/themes/sprout/assets/css/**/*.css"
+          "app/themes/sprout/assets/scripts/**/*.js"
+          "app/themes/sprout/**/*.{html,php}"
         ]
 
   grunt.registerTask "default", [

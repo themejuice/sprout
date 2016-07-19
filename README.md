@@ -1,4 +1,4 @@
-# Trellis
+# Sprout
 _You are free to fork this repository and modify it as you see fit. If you do go that route, let us know and we can add it into the list of available starter templates for our [command line utility, `tj`](https://github.com/ezekg/theme-juice-cli)._
 
 ## Features
@@ -74,14 +74,14 @@ $theme = new Theme(array(
       "version" => "1.11.2",
       "in_footer" => true,
     ),
-    "theme-juice-scripts" => array(
+    "sprout-scripts" => array(
       "type" => "script",
       "location" => "assets/scripts/main.min.js",
       "dependencies" => array("jquery"),
       "version" => "0.1.0",
       "in_footer" => true,
     ),
-    "theme-juice-styles" => array(
+    "sprout-styles" => array(
       "type" => "style",
       "location" => "assets/css/main.min.css",
       "version" => "0.1.0",

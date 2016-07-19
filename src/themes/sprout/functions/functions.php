@@ -42,7 +42,7 @@ $theme = new Theme(array(
     ),
 
     // Theme scripts
-    "theme-juice-scripts" => array(
+    "sprout-scripts" => array(
       "type" => "script",
       "location" => "assets/scripts/main.min.js",
       "dependencies" => array("jquery"),
@@ -51,7 +51,7 @@ $theme = new Theme(array(
     ),
 
     // Theme stylesheet
-    "theme-juice-styles" => array(
+    "sprout-styles" => array(
       "type" => "style",
       "location" => "assets/css/main.min.css",
       "version" => "0.1.0",
@@ -65,8 +65,8 @@ $theme = new Theme(array(
  * @link http://codex.wordpress.org/Function_Reference/register_nav_menus
  */
 register_nav_menus(array(
-  "primary_nav" => __("Primary Navigation", "theme-juice"),
-  "footer_nav" => __("Footer Navigation", "theme-juice"),
+  "primary_nav" => __("Primary Navigation", "sprout"),
+  "footer_nav" => __("Footer Navigation", "sprout"),
 ));
 
 /**

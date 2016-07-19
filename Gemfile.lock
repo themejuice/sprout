@@ -17,7 +17,7 @@ GEM
     ffi (1.9.10)
     flint-gs (2.3.3)
       sass (~> 3.4)
-    graphite-sass (0.5.4)
+    graphite-sass (0.5.5)
       sass (>= 3.3.0)
     multi_json (1.11.2)
     rb-fsevent (0.9.5)
@@ -36,7 +36,10 @@ PLATFORMS
 DEPENDENCIES
   compass (~> 1.0)
   flint-gs (~> 2.1)
-  graphite-sass (~> 0.5)
+  graphite-sass (~> 0.5.5)
   sass-globbing (~> 1.1)
   sassy-export (~> 2.0)
   stampy (~> 0.1)
+
+BUNDLED WITH
+   1.12.5

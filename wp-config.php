@@ -154,7 +154,7 @@ define("WP_LANG_DIR", WP_CONTENT_DIR . "/lang");
 /**
  * Other settings
  */
-define("WP_DEFAULT_THEME", "theme-juice");
+define("WP_DEFAULT_THEME", "sprout");
 define("DISALLOW_FILE_EDIT", true);
 define("DISABLE_WP_CRON", true);
 

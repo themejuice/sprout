@@ -1,5 +1,5 @@
 {
-  "name": "trellis",
+  "name": "sprout",
   "private": true,
   "dependencies": {
     "normalize.scss": "~3.0.2",
