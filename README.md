@@ -41,7 +41,7 @@ If you're working on an existing project, run `tj setup` and follow the prompts.
 To build a project (compile assets, install dependencies, etc.), run `tj install`.
 
 #### Watching and compiling assets
-To watch and compile assets with Grunt, run `tj watch`. See Grunt documentation for additional commands.
+To watch and compile assets with Grunt, run `tj dev`. See Grunt documentation for additional commands.
 
 #### Installing front-end dependencies
 To install and update Bower dependencies, run `tj assets install`, `tj assets install <package>`. See Bower documentation for additional commands.
@@ -50,7 +50,7 @@ To install and update Bower dependencies, run `tj assets install`, `tj assets in
 To install and update Composer dependencies, run `tj vendor install` or `tj vendor update`. See Composer documentation for additional commands.
 
 #### Managing WordPress
-To manage a project's WordPress installation with WP-CLI, run `tj wp <command>` e.g. `tj wp db export`, `tj wp search-replace project.com project.dev`. See WP-CLI documentation for additional commands.
+To manage a project's WordPress installation with WP-CLI, run `wp @dev <command>` e.g. `wp @dev db export`, `wp @dev search-replace project.com project.dev`. See WP-CLI documentation for additional commands.
 
 #### Configuring your `$theme`
 Within the `functions.php` file, there is a global `$theme` variable. This is where you will add your theme's assets and configure any packages that you are including. Most packages will accept an empty array (`array()`) to use the default settings defined within the package itself; if you want more control, you can specify which features to load with a boolean. For example, by default, we selectively load only a few shortcodes:
@@ -107,7 +107,7 @@ We try to follow the [12 factor app](http://12factor.net/) philosophy as closely
 * Other site-assets, such as custom controllers are written in PHP
 
 ## Deploying to production
-***If possibly, deploy using [`tj`](http://themejuice.it/deploy). It will automate everything below.***
+***If possible, deploy using [`tj`](http://themejuice.it/deploy). It will automate everything below.***
 
 When deploying to production, ensure that you do _not_ deploy the `robots.txt` file, and that you disable the dynamic hostname plugin. Do not deploy the `src/` directory, or any of the build files e.g. `Gruntfile.coffee`, `bower.json`, `package.json`, `composer.json`, `composer.lock`.
 

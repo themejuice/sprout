@@ -1,4 +1,11 @@
 #
+# Project configuration
+#
+project:
+  name: <%= name %>
+  url: <%= url %>
+
+#
 # Manage command aliases for the current application
 #
 commands:
@@ -10,14 +17,10 @@ commands:
     - npm install
     - bower install
     - grunt build
-  
+
   # Manage build tools
   dev:
     - grunt %args%
-    
-  watch:
-    - echo "This command is deprecated! Use `tj dev` instead."
-    - tj dev %args%
 
   # Manage front-end dependencies
   assets:
@@ -27,14 +30,10 @@ commands:
   vendor:
     - composer %args%
 
-  # Manage WP installation
-  wp:
-    - wp ssh --host=vagrant %args%
-
   # Create a backup of the current database with a nice timestamp
   backup:
     - mkdir -p backup
-    - wp ssh --host=vagrant db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
+    - wp @dev db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
 
   # Package up entire application into a gzipped tar file
   dist:
@@ -45,13 +44,9 @@ commands:
 #
 deployment:
 
-  # Application settings
-  application:
-    name: example-app
-
   # Repository settings
   repository:
-    repo_url: git@github.com:ezekg/theme-juice-starter.git
+    repo_url: <%= repository %>
     branch: :master
     scm: :rsync
 
@@ -103,7 +98,7 @@ deployment:
     # Run application install scripts
     install:
       - composer install --no-dev
-      - bundle install
+      - gem install bundler && bundle install
       - npm install
       - bower install
       - grunt build
@@ -126,7 +121,7 @@ deployment:
   # Deployment stages
   stages:
     # production:
-    #   server: 192.168.50.4
+    #   server: 192.168.1.1
     #   path: /var/www/production
     #   user: deploy
     #   url: example.com
@@ -142,7 +137,7 @@ deployment:
     #     - :db
 
     # staging:
-    #   server: 192.168.50.4
+    #   server: 192.168.1.1
     #   path: /var/www/staging
     #   user: deploy
     #   url: staging.example.com
@@ -158,11 +153,11 @@ deployment:
     # This is your development environment used to push/pull database files,
     #  uploads, the .env file, etc.
     vagrant:
-      server: example.dev
-      path: /srv/www/tj-example
+      server: <%= vm_ip %>
+      path: <%= vm_srv %>
       user: vagrant
       pass: vagrant
-      url: example.dev
+      url: <%= url %>
       uploads: app/uploads
       backup: backup
       tmp: tmp
