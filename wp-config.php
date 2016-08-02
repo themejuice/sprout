@@ -85,6 +85,18 @@ define("WP_DEBUG", filter_var(getenv("WP_DEBUG"), FILTER_VALIDATE_BOOLEAN));
 define("WP_CACHE", filter_var(getenv("WP_CACHE"), FILTER_VALIDATE_BOOLEAN));
 
 /**
+ * Mailcatcher
+ *
+ * This filters the WP_MAILCATCHER declaration from .env.{stage} to a
+ *  boolean. Accepts strings like 'true', 'yes', etc.
+ *
+ * @see https://wordpress.org/plugins/mailcatcher/
+ */
+if ( WP_ENV === "development" ) {
+  define("WP_MAILCATCHER", filter_var(getenv("WP_MAILCATCHER"), FILTER_VALIDATE_BOOLEAN));
+}
+
+/**
  * URLs
  */
 define("WP_HOME", getenv("WP_HOME"));

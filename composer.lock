@@ -476,7 +476,7 @@
             "version": "0.4.2",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/dynamic-hostname/",
+                "url": "https://plugins.svn.wordpress.org/dynamic-hostname/",
                 "reference": "tags/0.4.2"
             },
             "dist": {
@@ -490,6 +490,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/dynamic-hostname/"
+        },
+        {
+            "name": "wpackagist-plugin/mailcatcher",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/mailcatcher/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/mailcatcher.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/mailcatcher/"
         }
     ],
     "aliases": [],
