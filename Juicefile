@@ -23,7 +23,7 @@ commands:
     - grunt %args%
 
   # Manage front-end dependencies
-  assets:
+  asset:
     - bower %args%
 
   # Manage back-end dependencies
