@@ -30,10 +30,14 @@ commands:
   vendor:
     - composer %args%
 
+  # Run WP-CLI commands over SSH
+  wp:
+    - wp @development %args%
+
   # Create a backup of the current database with a nice timestamp
   backup:
     - mkdir -p backup
-    - wp @dev db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
+    - wp @development db export backup/$(date +'%Y-%m-%d-%H-%M-%S').local.sql
 
   # Package up entire application into a gzipped tar file
   dist:
