@@ -183,7 +183,7 @@ Order that the starter template attempts to load is (order defined within `wp-co
 To deploy a project, please install [`tj`](http://themejuice.it/deploy). After
 you've done that, please follow these steps:
 
-1. [GitHub's tutorial on generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/) (if you've already set up public/private keys, then feel free to skip this step).
+1. Go through [GitHub's tutorial on generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/) (if you've already set up public/private keys, then feel free to skip this step).
 1. Add your public key to the server you want to deploy to, so that you can SSH into it without a password (required by Capistrano, the tool use for deployment); to do so, copy your public key via `pbcopy < ~/.ssh/id_rsa.pub` on your machine, and then add it into the `~/.ssh/authorized_keys` file on the server.
 1. Set up a stage within your `Juicefile` configuration, using one of the example stages as a starting point.
 1. Run `tj remote <stage> setup`, where `stage` is the stage name you've chosen. Ensure that this runs without any errors.
