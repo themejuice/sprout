@@ -13,7 +13,7 @@ commands:
   # Run application install scripts
   install:
     - composer install
-    - gem install bundler && bundle install
+    - bundle install
     - npm install
     - bower install
     - grunt build
@@ -102,7 +102,7 @@ deployment:
     # Run application install scripts
     install:
       - composer install --no-dev
-      - gem install bundler && bundle install
+      - bundle install
       - npm install
       - bower install
       - grunt build
