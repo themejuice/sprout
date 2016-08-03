@@ -183,12 +183,14 @@ Order that the starter template attempts to load is (order defined within `wp-co
 To deploy a project, please install [`tj`](http://themejuice.it/deploy). After
 you've done that, please follow these steps:
 
+1. Create a new user for deployment on the server (optional).
 1. Go through [GitHub's tutorial on generating an SSH key](https://help.github.com/articles/generating-an-ssh-key/) (if you've already set up public/private keys, then feel free to skip this step).
 1. Add your public key to the server you want to deploy to, so that you can SSH into it without a password (required by Capistrano, the tool use for deployment); to do so, copy your public key via `pbcopy < ~/.ssh/id_rsa.pub` on your machine, and then add it into the `~/.ssh/authorized_keys` file on the server.
 1. Set up a stage within your `Juicefile` configuration, using one of the example stages as a starting point.
-1. Run `tj remote <stage> setup`, where `stage` is the stage name you've chosen. Ensure that this runs without any errors.
-1. Configure your stage's web root to point to `{deploy_directory}/current`. [See Capistrano's folder structure for more information](http://capistranorb.com/documentation/getting-started/structure/).
-1. Create an empty database and configure your `{deploy_directory}/shared/.env.production` file on the server.
+1. Confirm the deployment user owns the deploy path
+1. Run `tj remote <stage> setup` to setup the required directories, where `stage` is the stage name you've chosen. Ensure that this runs without any errors.
+1. Configure your stage's web root to point to `{deploy_path}/current`. [See Capistrano's folder structure for more information](http://capistranorb.com/documentation/getting-started/structure/).
+1. Create an empty database and configure your `{deploy_path}/shared/.env.{stage}` file on the server.
 1. Run `tj deploy <stage>` to deploy your project.
 1. Run `tj remote <stage> uploads:push` to push uploads from your development environment to the server (optional).
 1. Run `tj remote <stage> db:push` to push your development database to the server (optional).
