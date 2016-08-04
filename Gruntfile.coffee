@@ -68,6 +68,9 @@ module.exports = (grunt) ->
           sassDir: "src/themes/sprout/styles"
           httpPath: "/"
           outputStyle: "expanded"
+          raw: """
+               Encoding.default_external = 'utf-8'
+               """
           require: [
             "flint"
             "sass-globbing"
