@@ -5,7 +5,7 @@
 # This task is run after the 'deploy:check' hook. For more information on deploy
 # flow, see: http://capistranorb.com/documentation/getting-started/flow/.
 task :ask_production_confirmation do
-  next if fetch(:stage, nil) != :production
+  next if !$stdout.isatty || fetch(:stage, nil) != :production
 
   set :confirmed, proc {
     puts <<-WARN
