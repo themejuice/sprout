@@ -168,6 +168,7 @@ define("WP_LANG_DIR", WP_CONTENT_DIR . "/lang");
  */
 define("WP_DEFAULT_THEME", "sprout");
 define("DISALLOW_FILE_EDIT", true);
+define("DISALLOW_FILE_MODS", true);
 define("DISABLE_WP_CRON", true);
 
 /**
