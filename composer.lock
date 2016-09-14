@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af9752e25ae2f397c6dc20e812fc9543",
-    "content-hash": "df1ead2b5b13f31bea2f7d498e605ab9",
+    "hash": "cdfb35852db48d4adf832ab665d7daf3",
+    "content-hash": "6d19aa0a37efce214d79b5732e799068",
     "packages": [
         {
             "name": "composer/installers",
@@ -385,7 +385,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
-                "reference": null,
+                "reference": "tags/5.5.2",
                 "shasum": null
             },
             "require": {
@@ -405,7 +405,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
-                "reference": null,
+                "reference": "tags/2.2.6",
                 "shasum": null
             },
             "require": {
@@ -425,7 +425,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.3.zip",
-                "reference": null,
+                "reference": "tags/0.6.3",
                 "shasum": null
             },
             "require": {
@@ -465,7 +465,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-fail2ban.3.5.3.zip",
-                "reference": null,
+                "reference": "tags/3.5.3",
                 "shasum": null
             },
             "require": {
@@ -477,26 +477,6 @@
     ],
     "packages-dev": [
         {
-            "name": "wpackagist-plugin/dynamic-hostname",
-            "version": "0.4.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/dynamic-hostname/",
-                "reference": "tags/0.4.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/dynamic-hostname.0.4.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/dynamic-hostname/"
-        },
-        {
             "name": "wpackagist-plugin/mailcatcher",
             "version": "1.0",
             "source": {
@@ -507,7 +487,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/mailcatcher.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -515,6 +495,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/mailcatcher/"
+        },
+        {
+            "name": "wpackagist-plugin/relative-url",
+            "version": "0.1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/relative-url/",
+                "reference": "tags/0.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/relative-url.0.1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/relative-url/"
         }
     ],
     "aliases": [],
