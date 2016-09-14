@@ -37,7 +37,7 @@
     "wpackagist-plugin/wordpress-seo": "*"
   },
   "require-dev": {
-    "wpackagist-plugin/dynamic-hostname": "*",
+    "wpackagist-plugin/relative-url": "*",
     "wpackagist-plugin/mailcatcher": "*"
   },
   "extra": {
