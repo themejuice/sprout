@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af9752e25ae2f397c6dc20e812fc9543",
-    "content-hash": "df1ead2b5b13f31bea2f7d498e605ab9",
+    "hash": "7bcdf25519df4f22f9dd7d5a6c4f5e97",
+    "content-hash": "b94d8d268021eba479e619d3075f27ce",
     "packages": [
         {
             "name": "composer/installers",
@@ -342,10 +342,10 @@
         },
         {
             "name": "wordpress/wordpress",
-            "version": "4.6.1",
+            "version": "4.7.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/WordPress/WordPress/archive/4.6.1.zip",
+                "url": "https://github.com/WordPress/WordPress/archive/4.7.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -356,15 +356,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.4.1",
+            "version": "1.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.4.1"
+                "reference": "tags/1.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.4.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.5.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -376,16 +376,16 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.5.2",
+            "version": "5.5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.5.2"
+                "reference": "tags/5.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
-                "reference": "tags/5.5.2",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.4.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -436,15 +436,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.5",
+            "version": "4.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.5"
+                "reference": "tags/4.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.3.zip",
                 "reference": null,
                 "shasum": null
             },
